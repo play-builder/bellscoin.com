@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import Header from './Header.tsx'
+import Intro from './Intro.tsx'
 import reactLogo from './assets/react.svg'
 
 import viteLogo from '/vite.svg'
@@ -11,6 +12,9 @@ function App() {
 	return (
 		<>
 			<Header />
+			<main>
+				<Intro />
+			</main>
 			<div>
 				<a href="https://vitejs.dev" target="_blank" rel="noreferrer">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
