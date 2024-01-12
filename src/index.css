@@ -53,3 +53,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#coinGecko-white {
+  --primary-color: white;
+  --secondary-color: currentColor;
+  --tertiary-color: #999999;
+}
+
+#coinGecko-red {
+  --primary-color: #E60012;
+  --secondary-color: #7F7F7F;
+  --tertiary-color: currentColor;
+}
