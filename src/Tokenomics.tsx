@@ -9,6 +9,8 @@ import {
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
+import { SequenceArrows } from '~/component/SequenceArrows.tsx'
+
 Chart.register(
 	CategoryScale,
 	Filler,
@@ -122,12 +124,14 @@ export default function Tokenomics() {
 							<span>Bells</span>
 						</div>
 					</div>
-					<div className="flex items-center justify-evenly">
-						<div className="h-[27px] w-[27px] rotate-90 bg-white clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-90 bg-[#ED2C31] clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-90 bg-white clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-90 bg-[#ED2C31] clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-90 bg-white clip-path-triangle"></div>
+					<div className="flex items-center justify-evenly px-[5%]">
+						<SequenceArrows
+							colorOff="white"
+							colorOn="#ED2C31"
+							direction="right"
+							size={38}
+							number={5}
+						/>
 					</div>
 					<div className="h-[426px] w-[522px] rounded-[50px] bg-white py-[25px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<h4 className="px-[70px] text-right text-[30px]">Phase2</h4>
@@ -163,9 +167,13 @@ export default function Tokenomics() {
 					<div></div>
 					<div></div>
 					<div className="flex h-[146px] w-[522px] flex-col items-center justify-evenly py-[10px]">
-						<div className="h-[27px] w-[27px] rotate-180 bg-[#ED2C31] clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-180 bg-white clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] rotate-180 bg-[#ED2C31] clip-path-triangle"></div>
+						<SequenceArrows
+							colorOff="white"
+							colorOn="#ED2C31"
+							direction="down"
+							size={38}
+							number={3}
+						/>
 					</div>
 					<div className="h-[426px] w-[522px] rounded-[50px] bg-white py-[25px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<h4 className="px-[70px] text-right text-[30px]">Phase5</h4>
@@ -184,12 +192,14 @@ export default function Tokenomics() {
 							2,820 Bells
 						</p>
 					</div>
-					<div className="flex items-center justify-evenly">
-						<div className="h-[27px] w-[27px] -rotate-90 bg-white clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] -rotate-90 bg-[#ED2C31] clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] -rotate-90 bg-white clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] -rotate-90 bg-[#ED2C31] clip-path-triangle"></div>
-						<div className="h-[27px] w-[27px] -rotate-90 bg-white clip-path-triangle"></div>
+					<div className="flex items-center justify-evenly px-[5%]">
+						<SequenceArrows
+							colorOff="white"
+							colorOn="#ED2C31"
+							direction="left"
+							size={38}
+							number={5}
+						/>
 					</div>
 					<div className="h-[426px] w-[522px] rounded-[50px] bg-white py-[25px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<h4 className="px-[70px] text-right text-[30px]">Phase4</h4>

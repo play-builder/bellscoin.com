@@ -13,11 +13,16 @@ export default {
 			senior: "'PC Senior', sans-serif",
 		},
 		extend: {
-			clipPath: {
-				triangle: 'polygon(50% 13.4%, 0% 100%, 100% 100%)',
+			animation: {
+				blink: 'blink 1s step-end infinite',
 			},
 			dropShadow: {
 				bubble: '5.58px 5.58px 3px rgba(0, 0, 0, 0.6)',
+			},
+			keyframes: {
+				blink: {
+					'50%': { opacity: 0 },
+				},
 			},
 			textShadow: {
 				DEFAULT: '5.58px 5.58px 3px rgba(0, 0, 0, 0.6)',
@@ -26,17 +31,19 @@ export default {
 		letterSpacing: { 305: '0.305em' },
 	},
 	plugins: [
-		plugin(function ({ matchUtilities, theme }) {
+		plugin(({ matchUtilities, theme }) => {
 			matchUtilities(
 				{
-					'clip-path': (value) => ({
-						clipPath: value,
+					'animation-delay': (value) => ({
+						'animation-delay': value,
 					}),
 				},
-				{ values: theme('clipPath') },
+				{
+					values: theme('transitionDelay'),
+				},
 			)
 		}),
-		plugin(function ({ matchUtilities, theme }) {
+		plugin(({ matchUtilities, theme }) => {
 			matchUtilities(
 				{
 					'text-shadow': (value) => ({

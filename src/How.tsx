@@ -4,7 +4,7 @@ import {
 	Github,
 	Telegram,
 	Twitter,
-} from './icon/Contact.tsx'
+} from './component/ContactIcon.tsx'
 
 export default function How() {
 	return (
