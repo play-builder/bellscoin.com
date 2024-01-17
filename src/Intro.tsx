@@ -1,6 +1,11 @@
+import mainBackground from '~/assets/main-background.svg'
+
 export default function Intro() {
 	return (
-		<section className="relative bg-[url('/main-background.svg')] bg-cover bg-center bg-no-repeat px-[calc(28000%/1920)] pb-[100px] pt-[350px] font-chelsea uppercase tracking-305">
+		<section
+			className="relative bg-cover bg-center bg-no-repeat px-[calc(28000%/1920)] pb-[100px] pt-[350px] font-chelsea uppercase tracking-305"
+			style={{ backgroundImage: `url(${mainBackground})` }}
+		>
 			<div className="absolute left-0 top-0 h-full w-full bg-[#00C28966]"></div>
 			<div className="relative">
 				<h1 className="text-[45px] text-white">Bells ($Bel) coin</h1>

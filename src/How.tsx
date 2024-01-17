@@ -1,3 +1,10 @@
+
+import dingCoin from '~/assets/ding-coin.png'
+import dingHeart from '~/assets/ding-heart.png'
+import dingMiner from '~/assets/ding-miner.png'
+import nkyc from '~/assets/nkyc.png'
+import xeggex from '~/assets/xeggex.png'
+
 import {
 	CoinGecko,
 	Discord,
@@ -19,8 +26,8 @@ export default function How() {
 					Listing exchanges
 				</h3>
 				<div className="mt-[56px] flex items-center justify-center gap-x-[148px]">
-					<img src="/nkyc.png" alt="NKYC" width={128} />
-					<img src="/xeggex.png" alt="XeggeX" width={292} />
+					<img src={nkyc} alt="NKYC" width={128} />
+					<img src={xeggex} alt="XeggeX" width={292} />
 				</div>
 				<p className="mt-[96px] font-senior text-[30px] leading-[2]">
 					AND WE NEED MORE..
@@ -31,7 +38,7 @@ export default function How() {
 				</p>
 			</div>
 			<div className="mt-[456px] grid grid-cols-[104px_1fr] items-center gap-x-[10px] pl-[calc(7400%/1920)] pr-[calc(13600%/1920)] text-[#505050] *:font-senior *:tracking-[0.015em] [&_h3]:pt-[10px] [&_h3]:text-[44px]">
-				<img src="/ding-coin.png" alt="" />
+				<img src={dingCoin} alt="" />
 				<h3 className="text-[#ED2C31]">Disclaimer</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px]">
 					<span className="text-[#ED2C31]">$Bells</span> coin has no association
@@ -47,7 +54,7 @@ export default function How() {
 					<br />
 					The coin is completely useless and for entertainment purposes only.
 				</p>
-				<img src="/ding-miner.png" alt="" />
+				<img src={dingMiner} alt="" />
 				<h3 className="text-[#08835E]">Donation</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px]">
 					Bells coin is not pre-mined and is fully decentralized. The only
@@ -61,7 +68,7 @@ export default function How() {
 						BCT6G3f8Z1s2aFxBMwWmTDp1Qk6k9twCRU
 					</span>
 				</p>
-				<img src="/ding-heart.png" alt="" />
+				<img src={dingHeart} alt="" />
 				<h3 className="text-[#1D644F]">Contact</h3>
 				<div className="col-start-2 mt-[10px] flex items-center gap-x-[36px] text-[#F0C10F]">
 					<Github fill="white" width={48} />

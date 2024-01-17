@@ -9,6 +9,9 @@ import {
 } from 'chart.js'
 import { Line } from 'react-chartjs-2'
 
+
+import dogeCoin from '~/assets/doge-coin.png'
+import dogeTesla from '~/assets/doge-tesla.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 
 Chart.register(
@@ -25,11 +28,7 @@ export default function Tokenomics() {
 		<section>
 			<div className="flex items-center justify-center bg-[#FFFBB4] py-[350px]">
 				<div>
-					<img
-						src="/doge-tesla.png"
-						alt="doge on tesla"
-						className="w-[330px]"
-					/>
+					<img src={dogeTesla} alt="doge on tesla" className="w-[330px]" />
 				</div>
 				<p className="ml-[210px] font-chelsea text-[30px] uppercase leading-[2.25] tracking-305 text-[#F4BE04]">
 					Bells ($Bel) was developed
@@ -38,12 +37,8 @@ export default function Tokenomics() {
 					<br />
 					8days before
 					<br />
-					<img
-						src="/doge-coin.png"
-						alt="DOGE"
-						className="inline w-[88px]"
-					/>{' '}
-					DOGE coin
+					<img src={dogeCoin} alt="DOGE" className="inline w-[88px]" /> DOGE
+					coin
 					<br />
 					was released in the world
 				</p>

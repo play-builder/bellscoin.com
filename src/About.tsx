@@ -1,3 +1,8 @@
+import dogeTruck from '~/assets/doge-truck.png'
+import grass from '~/assets/grass.png'
+import soil from '~/assets/soil.png'
+import sprout from '~/assets/sprout.png'
+
 export default function About() {
 	return (
 		<section className="bg-gradient-to-b from-[#7EE0FF] to-white pt-[240px] *:tracking-[0.015em]">
@@ -31,13 +36,28 @@ export default function About() {
 			</article>
 			<div className="relative mt-[628px]">
 				<img
-					src="/doge-truck.png"
+					src={dogeTruck}
 					alt="doge on truck"
 					className="absolute bottom-[222px] right-[104px] w-[1020px]"
 				/>
-				<div className="h-[64px] bg-[url('/sprout.png')] bg-contain bg-repeat-x"></div>
-				<div className="h-[312px] bg-[url('/grass.png')] bg-[length:120px_104px] bg-repeat"></div>
-				<div className="h-[85px] bg-[url('/soil.png')] bg-[length:120px_104px] bg-repeat-x"></div>
+				<div
+					style={{
+						backgroundImage: `url(${sprout})`,
+					}}
+					className="h-[64px] bg-contain bg-repeat-x"
+				></div>
+				<div
+					className="h-[312px] bg-[length:120px_104px] bg-repeat"
+					style={{
+						backgroundImage: `url(${grass})`,
+					}}
+				></div>
+				<div
+					className="h-[85px] bg-[length:120px_104px] bg-repeat-x"
+					style={{
+						backgroundImage: `url(${soil})`,
+					}}
+				></div>
 			</div>
 		</section>
 	)
