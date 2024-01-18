@@ -10,7 +10,7 @@ import {
 export default function Header() {
 	return (
 		<header>
-			<nav className="flex h-[184px] w-full items-center justify-end space-x-[48px] bg-[#E60012] pr-[calc(9000%/1920)] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white hover:*:text-[#FFE46A]">
+			<nav className="flex h-[184px] w-full items-center justify-end space-x-[40px] bg-[#E60012] pr-[calc(9000%/1920)] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white hover:*:text-[#FFE46A]">
 				<a href="">BELSCAN</a>
 				<a href="">
 					NODE
