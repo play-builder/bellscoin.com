@@ -7,14 +7,15 @@ import {
 	PointElement,
 	Tooltip,
 } from 'chart.js'
+import annotationPlugin from 'chartjs-plugin-annotation'
 import { Line } from 'react-chartjs-2'
-
 
 import dogeCoin from '~/assets/doge-coin.png'
 import dogeTesla from '~/assets/doge-tesla.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 
 Chart.register(
+	annotationPlugin,
 	CategoryScale,
 	Filler,
 	LinearScale,
@@ -22,6 +23,9 @@ Chart.register(
 	PointElement,
 	Tooltip,
 )
+
+const chartPointDoge = new Image(30, 30)
+chartPointDoge.src = dogeCoin
 
 export default function Tokenomics() {
 	return (
@@ -243,13 +247,67 @@ export default function Tokenomics() {
 							},
 						},
 						plugins: {
-							tooltip: {
-								mode: 'index',
-								intersect: false,
-								displayColors: true,
-								callbacks: {
-									title: function (context) {
-										return `What title for ${context[0].label}?`
+							annotation: {
+								annotations: {
+									epoch5: {
+										backgroundColor: 'rgba(43, 105, 97, 0.1)',
+										borderWidth: 0,
+										type: 'box',
+										xMin: '2024-01-06',
+									},
+									line: {
+										type: 'line',
+										borderWidth: 3,
+										borderColor: 'rgba(5, 98, 66, 0.6)',
+										borderDash: [5, 5],
+										yMin: 6,
+										yMax: 6,
+									},
+								},
+							},
+							// tooltip: {
+							// 	mode: 'index',
+							// 	intersect: false,
+							// 	displayColors: true,
+							// 	callbacks: {
+							// 		title: function (context) {
+							// 			return `What title for ${context[0].label}?`
+							// 		},
+							// 	},
+							// },
+						},
+						scales: {
+							x: {
+								border: {
+									color: '#ED2C31',
+									width: 5,
+								},
+								grid: {
+									color: 'rgba(5, 98, 66, 0.6)',
+									lineWidth: 0.5,
+								},
+								ticks: {
+									color: 'black',
+									font: {
+										family: "'Mogra', system-ui",
+										size: 20,
+									},
+								},
+							},
+							y: {
+								border: {
+									color: '#ED2C31',
+									width: 5,
+								},
+								grid: {
+									color: 'rgba(5, 98, 66, 0.6)',
+									lineWidth: 0.5,
+								},
+								ticks: {
+									color: 'black',
+									font: {
+										family: "'Mogra', system-ui",
+										size: 20,
 									},
 								},
 							},
@@ -272,9 +330,11 @@ export default function Tokenomics() {
 							{
 								label: 'What data label?',
 								data: [1, 10, 2, 9, 3, 8, 4, 7, 5, 6],
-								backgroundColor: ['rgba(54, 162, 235, 0.2)'],
-								borderColor: ['rgba(54, 162, 235, 1)'],
+								backgroundColor: 'transparent',
+								borderColor: '#834B16',
 								fill: 'start',
+								pointStyle: ['circle', 'rect', chartPointDoge, 'triangle'],
+								pointRadius: 10,
 							},
 						],
 					}}
