@@ -1,4 +1,3 @@
-
 import dingCoin from '~/assets/ding-coin.png'
 import dingHeart from '~/assets/ding-heart.png'
 import dingMiner from '~/assets/ding-miner.png'
@@ -9,6 +8,7 @@ import {
 	CoinGecko,
 	Discord,
 	Github,
+	Linktree,
 	Telegram,
 	Twitter,
 } from './component/ContactIcon.tsx'
@@ -70,12 +70,13 @@ export default function How() {
 				</p>
 				<img src={dingHeart} alt="" />
 				<h3 className="text-[#1D644F]">Contact</h3>
-				<div className="col-start-2 mt-[10px] flex items-center gap-x-[36px] text-[#F0C10F]">
-					<Github fill="white" width={48} />
-					<Twitter fill="white" height={42} />
-					<Telegram fill="white" width={48} />
-					<Discord fill="white" width={48} />
-					<CoinGecko theme="white" width={48} />
+				<div className="col-start-2 mt-[10px] flex items-center gap-x-[32px] text-[#F0C10F]">
+					<Github width={44} />
+					<Twitter height={40} />
+					<Telegram width={44} />
+					<Discord width={44} />
+					<CoinGecko width={44} />
+					<Linktree height={44} />
 				</div>
 			</div>
 		</section>
