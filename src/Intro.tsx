@@ -38,53 +38,55 @@ export default function Intro() {
 					<br />
 					BELLS had already existed.
 				</p>
-				<p className="ml-[28px] mt-[310px] inline-block text-center text-[36px] leading-[1.2] tracking-305">
-					Original Meme coin
-					<br />
-					<span className="text-[#ED2C31]">No pre-mined</span>
-					<br />
-					Fully decentralized
-					<br />
-					Proof of work
-				</p>
-				<div className="absolute bottom-[100px] left-[620px] flex">
-					<img
-						src={bellBag}
-						alt="bell bag"
-						width={262}
-						className="absolute left-[140px] top-[196px] rotate-[11deg] drop-shadow-[14px_14px_15px_#313131]"
-					/>
-					<div className="flex-shrink-0">
-						<div className="relative">
-							<img src={speechBubble} alt="speech bubble" width={228} />
-							<span className="absolute top-[26px] text-center font-mogra text-[20px] leading-[1.5] tracking-305 text-[#F2C834]">
-								I need more Bells coin ($BEL)!
-							</span>
+				<div className="mx-auto flex w-[1080px]">
+					<p className="-ml-[60px] mt-[310px] inline-block w-[748px] flex-shrink-0 text-center text-[36px] leading-[1.2] tracking-305">
+						Original Meme coin
+						<br />
+						<span className="text-[#ED2C31]">No pre-mined</span>
+						<br />
+						Fully decentralized
+						<br />
+						Proof of work
+					</p>
+					<div className="relative -left-[80px] top-[40px] flex">
+						<img
+							src={bellBag}
+							alt="bell bag"
+							width={262}
+							className="absolute left-[140px] top-[196px] rotate-[11deg] drop-shadow-[14px_14px_15px_#313131]"
+						/>
+						<div className="flex-shrink-0">
+							<div className="relative">
+								<img src={speechBubble} alt="speech bubble" width={228} />
+								<span className="absolute top-[26px] text-center font-mogra text-[20px] leading-[1.5] tracking-305 text-[#F2C834]">
+									I need more Bells coin ($BEL)!
+								</span>
+							</div>
+							<div className="ml-[110px] mt-[11px] h-[42px] w-[42px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+							<div className="ml-[128px] mt-[20px] h-[28px] w-[28px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+							<div className="ml-[156px] mt-[15px] h-[20px] w-[20px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 						</div>
-						<div className="ml-[110px] mt-[11px] h-[42px] w-[42px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-						<div className="ml-[128px] mt-[20px] h-[28px] w-[28px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-						<div className="ml-[156px] mt-[15px] h-[20px] w-[20px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-					</div>
-					<div className="ml-[32px] mt-[5px] flex-shrink-0">
-						<div className="relative">
-							<img src={speechBubble} alt="speech bubble" width={305} />
-							<span className="absolute top-[20px] w-full text-center font-mogra text-[16px] leading-[22px] tracking-305 text-[#F2C834]">
-								It’s so cool
-								<br />
-								<span className="text-[#ED2C31]">meme coin</span>!
-								<br />
-								Bells coin
-								<br />
-								is 100%
-								<br />
-								decentralized,
-								<br />
-								powered by POW.
-							</span>
+						<div className="ml-[32px] mt-[5px] flex-shrink-0">
+							<div className="relative">
+								<img src={speechBubble} alt="speech bubble" width={305} />
+								<span className="absolute top-[20px] w-full text-center font-mogra text-[16px] leading-[22px] tracking-305 text-[#F2C834]">
+									It’s so cool
+									<br />
+									<span className="text-[#ED2C31]">meme coin</span>!
+									<br />
+									Bells coin
+									<br />
+									is 100%
+									<br />
+									decentralized,
+									<br />
+									powered by POW.
+								</span>
+							</div>
+							<div className="ml-[180px] mt-[10px] h-[36px] w-[36px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+							<div className="ml-[184px] mt-[25px] h-[28px] w-[28px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+							<div className="ml-[156px] mt-[24px] h-[20px] w-[20px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 						</div>
-						<div className="ml-[180px] mt-[10px] h-[36px] w-[36px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-						<div className="ml-[184px] mt-[25px] h-[28px] w-[28px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-						<div className="ml-[156px] mt-[24px] h-[20px] w-[20px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 					</div>
 				</div>
 			</div>
