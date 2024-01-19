@@ -25,7 +25,7 @@ export default {
 				},
 			},
 			textShadow: {
-				DEFAULT: '5.58px 5.58px 3px rgba(0, 0, 0, 0.6)',
+				DEFAULT: '15px 15px 15px rgba(0, 0, 0, 0.6)',
 			},
 		},
 		letterSpacing: { 305: '0.305em' },
