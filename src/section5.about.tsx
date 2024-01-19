@@ -3,7 +3,7 @@ import grass from '~/assets/grass.png'
 import soil from '~/assets/soil.png'
 import sprout from '~/assets/sprout.png'
 
-export default function About() {
+export default function Section5About() {
 	return (
 		<section className="bg-gradient-to-b from-[#7EE0FF] to-white pt-[240px] *:tracking-[0.015em]">
 			<h2 className="text-center font-senior text-[82px] leading-[1.1] text-[#056242]">

@@ -13,7 +13,7 @@ import {
 	Twitter,
 } from './component/ContactIcon.tsx'
 
-export default function How() {
+export default function Section6Buy() {
 	return (
 		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[110px] pt-[240px] *:tracking-[0.015em]">
 			<h2 className="text-center font-senior text-[82px] leading-[1.1] text-[#056242]">

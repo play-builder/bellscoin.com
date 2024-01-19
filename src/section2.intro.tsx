@@ -3,7 +3,7 @@ import mainBackground from '~/assets/main-background.svg'
 import speechBubble from '~/assets/speech-bubble.png'
 import welcomeBoard from '~/assets/welcome-board.png'
 
-export default function Intro() {
+export default function Section2Intro() {
 	return (
 		<section
 			className="relative bg-cover bg-center bg-no-repeat px-[calc(42000%/1920)] pb-[88px] pt-[255px] font-chelsea uppercase"
