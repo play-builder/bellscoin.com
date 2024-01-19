@@ -17,7 +17,7 @@ export default {
 				blink: 'blink 1s step-end infinite',
 			},
 			dropShadow: {
-				bubble: '5.58px 5.58px 3px rgba(0, 0, 0, 0.6)',
+				bubble: '15px 15px 8px rgba(0, 0, 0, 0.6)',
 			},
 			keyframes: {
 				blink: {
