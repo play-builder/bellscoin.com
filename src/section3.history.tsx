@@ -21,7 +21,13 @@ export default function Section3History() {
 						<br />
 						8days before
 						<br />
-						<img src={dogeCoin} alt="DOGE" className="inline w-[88px]" />
+						<img
+							src={dogeCoin}
+							alt="DOGE"
+							width={88}
+							height={88}
+							className="inline"
+						/>
 						<span className="pl-[20px] align-bottom text-[#ED2C31]">
 							DOGE coin
 						</span>
@@ -59,14 +65,25 @@ export default function Section3History() {
 								src={bellBag}
 								alt="bell bag"
 								width={191}
+								height={238}
 								className="-mt-[10px] ml-[42px] -scale-x-100"
 							/>
 						</div>
 						<div className="flex">
-							<img src={dogeTesla} alt="doge on tesla" width={400} />
+							<img
+								src={dogeTesla}
+								alt="doge on tesla"
+								width={400}
+								height={400}
+							/>
 							<div className="ml-[22px] mt-[5px] flex-shrink-0">
 								<div className="relative ml-[112px]">
-									<img src={speechBubble} alt="speech bubble" width={195} />
+									<img
+										src={speechBubble}
+										alt="speech bubble"
+										width={195}
+										height={124}
+									/>
 									<span className="absolute top-[15px] w-full pl-[10px] text-center font-mogra text-[36px] leading-[1.2] tracking-305">
 										SO,,
 										<br />

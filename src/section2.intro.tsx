@@ -14,6 +14,8 @@ export default function Section2Intro() {
 				<img
 					src={welcomeBoard}
 					alt="Welcome to Bells coin"
+					width={859}
+					height={543}
 					className="absolute -left-[226px] bottom-[calc(100%+25px)]"
 				/>
 				<h1 className="-ml-[4px] text-[56px] leading-[1.8] tracking-305 text-white">
@@ -53,11 +55,17 @@ export default function Section2Intro() {
 							src={bellBag}
 							alt="bell bag"
 							width={262}
+							height={333}
 							className="absolute left-[140px] top-[196px] rotate-[11deg] drop-shadow-[14px_14px_15px_#313131]"
 						/>
 						<div className="flex-shrink-0">
 							<div className="relative">
-								<img src={speechBubble} alt="speech bubble" width={228} />
+								<img
+									src={speechBubble}
+									alt="speech bubble"
+									width={228}
+									height={131}
+								/>
 								<span className="absolute top-[26px] text-center font-mogra text-[20px] leading-[1.5] tracking-305 text-[#F2C834]">
 									I need more Bells coin ($BEL)!
 								</span>
@@ -68,7 +76,12 @@ export default function Section2Intro() {
 						</div>
 						<div className="ml-[32px] mt-[5px] flex-shrink-0">
 							<div className="relative">
-								<img src={speechBubble} alt="speech bubble" width={305} />
+								<img
+									src={speechBubble}
+									alt="speech bubble"
+									width={305}
+									height={182}
+								/>
 								<span className="absolute top-[20px] w-full text-center font-mogra text-[16px] leading-[22px] tracking-305 text-[#F2C834]">
 									It’s so cool
 									<br />

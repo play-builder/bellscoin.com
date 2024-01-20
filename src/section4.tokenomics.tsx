@@ -194,12 +194,14 @@ export default function Section4Tokenomics() {
 							src={bellBag}
 							alt=""
 							width={153}
+							height={182}
 							className="absolute -left-[70px] -top-[94px]"
 						/>
 						<img
 							src={bellBag}
 							alt=""
 							width={153}
+							height={182}
 							className="absolute -top-[94px] left-[8px]"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
@@ -249,6 +251,7 @@ export default function Section4Tokenomics() {
 							src={bellBag}
 							alt=""
 							width={150}
+							height={180}
 							className="absolute -left-[53px] -top-[91px]"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
@@ -301,6 +304,7 @@ export default function Section4Tokenomics() {
 							src={bellCoins}
 							alt=""
 							width={156}
+							height={113}
 							className="absolute -left-[40px] -top-[36px]"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
@@ -340,6 +344,7 @@ export default function Section4Tokenomics() {
 							src={bellBag}
 							alt=""
 							width={105}
+							height={126}
 							className="absolute -left-[29px] -top-[43px]"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">

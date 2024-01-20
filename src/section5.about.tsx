@@ -10,24 +10,44 @@ export default function Section5About() {
 		<section className="bg-gradient-to-b from-[#7EE0FF] to-white pt-[300px] *:tracking-[0.015em]">
 			<div className="relative mx-auto w-[1080px]">
 				<div className="absolute -top-[100px] left-[52px]">
-					<img src={dingCoin} alt="" width={166} className="ml-[46px]" />
-					<img src={dingCoin} alt="" width={118} className="-mt-[36px]" />
+					<img
+						src={dingCoin}
+						alt=""
+						width={166}
+						height={143}
+						className="ml-[46px]"
+					/>
+					<img
+						src={dingCoin}
+						alt=""
+						width={118}
+						height={101}
+						className="-mt-[36px]"
+					/>
 					<img
 						src={dingCoin}
 						alt=""
 						width={76}
+						height={66}
 						className="-mt-[49px] ml-[95px]"
 					/>
 				</div>
 				<div className="absolute right-[84px]">
-					<img src={dingCoin} alt="" width={95} className="" />
+					<img src={dingCoin} alt="" width={95} height={82} />
 					<img
 						src={dingCoin}
 						alt=""
 						width={135}
+						height={116}
 						className="-mt-[17px] ml-[20px]"
 					/>
-					<img src={dingCoin} alt="" width={76} className="-mt-[65px]" />
+					<img
+						src={dingCoin}
+						alt=""
+						width={76}
+						height={66}
+						className="-mt-[65px]"
+					/>
 				</div>
 				<h2 className="text-center font-senior text-[56px] leading-[1.25] text-[#056242]">
 					About
@@ -73,7 +93,12 @@ export default function Section5About() {
 				<div className="absolute bottom-[360px] right-[calc(36800%/1920)]">
 					<div className="absolute -top-[344px] left-[260px]">
 						<div className="relative">
-							<img src={speechBubble} alt="speech bubble" width={373} />
+							<img
+								src={speechBubble}
+								alt="speech bubble"
+								width={373}
+								height={230}
+							/>
 							<span className="absolute top-[36px] w-[373px] text-center font-senior text-[24px] uppercase leading-[30px] text-[#525252]">
 								Do you want
 								<br />
@@ -95,7 +120,7 @@ export default function Section5About() {
 						<div className="-ml-[68px] mt-[14px] h-[38px] w-[38px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 						<div className="-ml-[49px] mt-[37px] h-[24px] w-[24px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 					</div>
-					<img src={dogeTruck} alt="doge on truck" width={805} />
+					<img src={dogeTruck} alt="doge on truck" width={805} height={460} />
 				</div>
 				<div
 					style={{

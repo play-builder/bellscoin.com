@@ -28,12 +28,14 @@ export default function Section6Buy() {
 						src={bellBag}
 						alt=""
 						width={84}
+						height={100}
 						className="-rotate-[15deg] -scale-x-100"
 					/>
 					<img
 						src={bellBag}
 						alt=""
 						width={140}
+						height={167}
 						className="-translate-y-[96px] translate-x-[36px] -rotate-[15deg]"
 					/>
 				</div>
@@ -42,12 +44,14 @@ export default function Section6Buy() {
 						src={bellBag}
 						alt=""
 						width={68}
+						height={82}
 						className="rotate-[15deg] -scale-x-100"
 					/>
 					<img
 						src={bellBag}
 						alt=""
 						width={140}
+						height={169}
 						className="-translate-y-[176px] translate-x-[54px] rotate-[15deg]"
 					/>
 				</div>
@@ -57,7 +61,7 @@ export default function Section6Buy() {
 			</div>
 			<div className="mx-auto mt-[100px] w-[1080px] font-senior text-[24px] leading-[1.33] text-[#691823]">
 				<div className="flex items-center gap-x-[44px]">
-					<img src={pepeMining} alt="Pepe is mining" width={520} />
+					<img src={pepeMining} alt="Pepe is mining" width={520} height={520} />
 					<p className="">
 						Download <span className="text-[#ED2C31]">Qt wallet</span>
 						<br />
@@ -111,7 +115,7 @@ export default function Section6Buy() {
 				</div>
 				<div className="flex justify-between">
 					<div className="flex flex-col items-center">
-						<img src={pepeHappy} alt="" width={520} />
+						<img src={pepeHappy} alt="" width={520} height={520} />
 						<p className="mt-[24px] text-center">
 							If you mine,
 							<br />
@@ -119,7 +123,7 @@ export default function Section6Buy() {
 						</p>
 					</div>
 					<div className="flex flex-col items-center">
-						<img src={pepeCex} alt="" width={520} />
+						<img src={pepeCex} alt="" width={520} height={520} />
 						<p className="mt-[24px] text-center">
 							You can also buy
 							<br />
@@ -187,7 +191,7 @@ export default function Section6Buy() {
 					</div>
 				</div>
 				<div className="flex flex-col items-center">
-					<img src={pepeMoon} alt="" width={520} />
+					<img src={pepeMoon} alt="" width={520} height={520} />
 					<p className="mt-[24px] text-center">
 						HODL and
 						<br />
@@ -198,8 +202,8 @@ export default function Section6Buy() {
 			<div className="mt-[150px] text-center *:tracking-[0.015em]">
 				<h3 className="font-chelsea text-[60px]">Listing exchanges</h3>
 				<div className="mt-[48px] flex items-center justify-center gap-x-[120px]">
-					<img src={nkyc} alt="NKYC" width={94} />
-					<img src={xeggex} alt="XeggeX" width={215} />
+					<img src={nkyc} alt="NKYC" width={94} height={90} />
+					<img src={xeggex} alt="XeggeX" width={215} height={67} />
 				</div>
 				<p className="mt-[66px] font-senior text-[24px] leading-[1.5]">
 					AND WE NEED MORE..
@@ -209,8 +213,8 @@ export default function Section6Buy() {
 					IF YOU LIKE <span className="text-[#ED2C31]">$BELLS</span>
 				</p>
 			</div>
-			<div className="mx-auto mt-[166px] grid w-[1080px] grid-cols-[112px_1fr] items-center gap-x-[10px] text-[#505050] *:font-senior *:tracking-[0.015em] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[34px]">
-				<img src={dingCoin} alt="" height={90} />
+			<div className="mx-auto mt-[166px] grid w-[1080px] grid-cols-[108px_1fr] items-center gap-x-[4px] text-[#505050] *:font-senior *:tracking-[0.015em] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[34px]">
+				<img src={dingCoin} alt="" width={104} height={90} />
 				<h3 className="text-[#ED2C31]">Disclaimer</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
 					<span className="text-[#ED2C31]">$Bells</span> coin has no association
@@ -222,7 +226,7 @@ export default function Section6Buy() {
 					<br />
 					The coin is completely useless and for entertainment purposes only.
 				</p>
-				<img src={dingMiner} alt="" height={90} />
+				<img src={dingMiner} alt="" width={113} height={90} />
 				<h3 className="text-[#08835E]">Donation</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
 					Bells coin is not pre-mined and is fully decentralized. The only
@@ -237,7 +241,7 @@ export default function Section6Buy() {
 						BCT6G3f8Z1s2aFxBMwWmTDp1Qk6k9twCRU
 					</span>
 				</p>
-				<img src={dingHeart} alt="" height={90} />
+				<img src={dingHeart} alt="" width={93} height={90} />
 				<h3 className="text-[#1D644F]">Contact</h3>
 				<div className="col-start-2 mt-[10px] flex items-center gap-x-[32px] text-[#F0C10F]">
 					<Github width={44} />
