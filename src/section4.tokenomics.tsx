@@ -327,7 +327,7 @@ export default function Section4Tokenomics() {
 						<p className="mt-[24px] text-center text-[20px] tracking-305 text-[#6A4E41]">
 							daily
 							<br />
-							2,820 BElls
+							2,880 Bells
 						</p>
 					</div>
 					<div className="flex items-center justify-evenly px-[4px]">
