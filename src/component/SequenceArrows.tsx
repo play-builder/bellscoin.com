@@ -9,16 +9,18 @@ export function SequenceArrows({
 	colorOff,
 	colorOn,
 	direction,
+	firstOn = true,
 	number,
 	size,
 }: {
 	colorOff: string
 	colorOn: string
 	direction: keyof typeof sequenceArrowsDirection
+	firstOn?: boolean
 	number: number
 	size: number
 }) {
-	const patternId = `${direction}-${number}-${size}`
+	const patternId = `${colorOff}-${colorOn}-${direction}-${number}-${size}`
 	const isXAxis = direction === 'left' || direction === 'right'
 
 	return (
@@ -68,7 +70,7 @@ export function SequenceArrows({
 						number * 2
 					}), 0px)))`,
 				}}
-				className={`animate-blink`}
+				className={`animate-blink ${firstOn ? 'animation-delay-[0.5s]' : ''}`}
 				height={isXAxis ? number * size : '200%'}
 				width={!isXAxis ? number * size : '200%'}
 				fill={`url(#${patternId}-on)`}
@@ -81,7 +83,7 @@ export function SequenceArrows({
 						number * 2
 					} + ${size}px), calc(100% / ${number}))`,
 				}}
-				className={`animate-blink animation-delay-[0.5s]`}
+				className={`animate-blink ${firstOn ? '' : 'animation-delay-[0.5s]'}`}
 				height={isXAxis ? number * size : '200%'}
 				width={!isXAxis ? number * size : '200%'}
 				fill={`url(#${patternId}-on)`}

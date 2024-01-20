@@ -291,6 +291,7 @@ export default function Section4Tokenomics() {
 							colorOff="white"
 							colorOn="#ED2C31"
 							direction="down"
+							firstOn={false}
 							size={26}
 							number={5}
 						/>
