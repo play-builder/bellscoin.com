@@ -8,6 +8,7 @@ import {
 	Tooltip,
 } from 'chart.js'
 import annotationPlugin from 'chartjs-plugin-annotation'
+import { useEffect, useState } from 'react'
 import { Line } from 'react-chartjs-2'
 
 import bellBag from '~/assets/bell-bag.png'
@@ -29,6 +30,53 @@ const chartPointBellCoins = new Image(30, 30)
 chartPointBellCoins.src = bellCoins
 
 export default function Section4Tokenomics() {
+	const [currentSupply, setCurrentSupply] = useState<
+		number | 'loading' | 'not available'
+	>('loading')
+	const [price, setPrice] = useState<number | 'loading' | 'not available'>(
+		'loading',
+	)
+	const marketCap =
+		currentSupply === 'loading' || price === 'loading'
+			? 'loading'
+			: currentSupply === 'not available' || price === 'not available'
+				? 'not available'
+				: currentSupply * price
+	const [hashRate, setHashRate] = useState<
+		number | 'loading' | 'not available'
+	>('loading')
+
+	useEffect(() => {
+		fetch('https://v2.belscan.io/ext/getmoneysupply')
+			.then(async (response) => {
+				setCurrentSupply(Math.floor(Number(await response.text())))
+			})
+			.catch(() => {
+				setCurrentSupply('not available')
+			})
+
+		fetch('https://v2.belscan.io/ext/getcurrentprice')
+			.then(async (response) => {
+				const json = (await response.json()) as {
+					last_price_usdt: number
+					last_price_usd: number
+				}
+				const priceInUsd = json.last_price_usd
+				setPrice(Number(priceInUsd.toString().slice(0, 10)))
+			})
+			.catch(() => {
+				setPrice('not available')
+			})
+
+		fetch('https://v2.belscan.io/api/getnetworkhashps')
+			.then(async (response) => {
+				setHashRate(Number(await response.text()))
+			})
+			.catch(() => {
+				setHashRate('not available')
+			})
+	}, [])
+
 	return (
 		<section className="bg-[#FCC22D] pb-[460px]">
 			<div className="relative overflow-hidden pb-[44px] pt-[36px]">
@@ -105,20 +153,38 @@ export default function Section4Tokenomics() {
 						</span>
 						<span>2 bells</span>
 					</div>
-					<div className="grid grid-cols-[1.3fr_1fr] items-center drop-shadow-bubble odd:*:text-[#404040] even:*:pl-[16px] even:*:text-[#ED2C31]">
-						<span>Current supply</span> {/* TODO sync?  */}
-						<span>13,194,418</span>
-						<span>Price</span>
-						<span>0.329999</span>
+					<div className="grid grid-cols-[1.3fr_1fr] items-center !pr-[8px] drop-shadow-bubble odd:*:text-[#404040] even:*:pl-[8px] even:*:text-[#ED2C31]">
+						<span>Current supply</span>
+						<span>
+							{typeof currentSupply === 'number'
+								? currentSupply.toLocaleString()
+								: currentSupply}
+						</span>
+						<span>Price(USD)</span>
+						<span>
+							{typeof price === 'number'
+								? price.toLocaleString('en-US', {
+										maximumFractionDigits: 6,
+									})
+								: price}
+						</span>
 						<span>Marketcap(USD)</span>
-						<span>3,364,147</span>
+						<span>
+							{typeof marketCap === 'number'
+								? (~~marketCap).toLocaleString()
+								: marketCap}
+						</span>
 						<span>
 							Network
 							<br />
 							hashrate
 						</span>
 						<span>
-							107.40 <span className="font-oleo">TH/S</span>
+							{typeof hashRate === 'number'
+								? `${+(hashRate / 1_000_000_000_000)
+										.toFixed(2)
+										.slice(0, 6)} TH/S`
+								: hashRate}{' '}
 						</span>
 					</div>
 				</div>
