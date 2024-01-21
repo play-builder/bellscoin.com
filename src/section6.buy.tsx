@@ -1,4 +1,5 @@
 import bellBag from '~/assets/bell-bag.png'
+import coinex from '~/assets/coinex.svg'
 import dingCoin from '~/assets/ding-coin.png'
 import dingHeart from '~/assets/ding-heart.png'
 import dingMiner from '~/assets/ding-miner.png'
@@ -201,9 +202,10 @@ export default function Section6Buy() {
 			</div>
 			<div className="mt-[150px] text-center *:tracking-[0.015em]">
 				<h3 className="font-chelsea text-[60px]">Listing exchanges</h3>
-				<div className="mt-[48px] flex items-center justify-center gap-x-[120px]">
+				<div className="mt-[48px] flex items-center justify-center gap-x-[80px]">
 					<img src={nkyc} alt="NKYC" width={94} height={90} />
 					<img src={xeggex} alt="XeggeX" width={215} height={67} />
+					<img src={coinex} alt="CoinEx" width={189} />
 				</div>
 				<p className="mt-[66px] font-senior text-[24px] leading-[1.5]">
 					AND WE NEED MORE..
