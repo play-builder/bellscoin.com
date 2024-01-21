@@ -1,33 +1,10 @@
-import {
-	CategoryScale,
-	Chart,
-	Filler,
-	LinearScale,
-	LineElement,
-	PointElement,
-	Tooltip,
-} from 'chart.js'
-import annotationPlugin from 'chartjs-plugin-annotation'
 import { useEffect, useState } from 'react'
-import { Line } from 'react-chartjs-2'
 
 import bellBag from '~/assets/bell-bag.png'
 import bellCoins from '~/assets/bell-coins.png'
 import ribbon from '~/assets/ribbon.svg'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
-
-Chart.register(
-	annotationPlugin,
-	CategoryScale,
-	Filler,
-	LinearScale,
-	LineElement,
-	PointElement,
-	Tooltip,
-)
-
-const chartPointBellCoins = new Image(30, 30)
-chartPointBellCoins.src = bellCoins
+import { EmissionChart } from '~/section4.chart.tsx'
 
 export default function Section4Tokenomics() {
 	const [currentSupply, setCurrentSupply] = useState<
@@ -386,111 +363,7 @@ export default function Section4Tokenomics() {
 				<h3 className="mt-[308px] text-center font-chelsea text-[64px] leading-[74px] text-[#834B16]">
 					Bellscoin emissions
 				</h3>
-				<Line
-					className="mx-auto mt-[140px] w-full !max-w-[1280px]"
-					options={{
-						// maintainAspectRatio: false,
-						elements: {
-							point: {
-								radius: 1,
-							},
-							line: {
-								tension: 0.1,
-							},
-						},
-						plugins: {
-							annotation: {
-								annotations: {
-									epoch5: {
-										backgroundColor: 'rgba(43, 105, 97, 0.1)',
-										borderWidth: 0,
-										type: 'box',
-										xMin: '2024-01-06',
-									},
-									line: {
-										type: 'line',
-										borderWidth: 3,
-										borderColor: 'rgba(5, 98, 66, 0.6)',
-										borderDash: [5, 5],
-										yMin: 6,
-										yMax: 6,
-									},
-								},
-							},
-							// tooltip: {
-							// 	mode: 'index',
-							// 	intersect: false,
-							// 	displayColors: true,
-							// 	callbacks: {
-							// 		title: function (context) {
-							// 			return `What title for ${context[0].label}?`
-							// 		},
-							// 	},
-							// },
-						},
-						scales: {
-							x: {
-								border: {
-									color: '#ED2C31',
-									width: 5,
-								},
-								grid: {
-									color: 'rgba(5, 98, 66, 0.6)',
-									lineWidth: 0.5,
-								},
-								ticks: {
-									color: 'black',
-									font: {
-										family: "'Mogra', system-ui",
-										size: 20,
-									},
-								},
-							},
-							y: {
-								border: {
-									color: '#ED2C31',
-									width: 5,
-								},
-								grid: {
-									color: 'rgba(5, 98, 66, 0.6)',
-									lineWidth: 0.5,
-								},
-								ticks: {
-									color: 'black',
-									font: {
-										family: "'Mogra', system-ui",
-										size: 20,
-									},
-								},
-							},
-						},
-					}}
-					data={{
-						labels: [
-							'2024-01-01',
-							'2024-01-02',
-							'2024-01-03',
-							'2024-01-04',
-							'2024-01-05',
-							'2024-01-06',
-							'2024-01-07',
-							'2024-01-08',
-							'2024-01-09',
-							'2024-01-10',
-						],
-						datasets: [
-							{
-								label: 'What data label?',
-								data: [1, 10, 2, 9, 3, 8, 4, 7, 5, 6],
-								backgroundColor: 'transparent',
-								borderColor: '#834B16',
-								fill: 'start',
-								pointStyle: ['circle', 'rect', chartPointBellCoins, 'triangle'],
-								pointRadius: 10,
-							},
-						],
-					}}
-				/>
+				<EmissionChart />
 			</div>
 		</section>
 	)
