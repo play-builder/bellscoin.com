@@ -130,9 +130,14 @@ export default function Section4Tokenomics() {
 					<h2 className="-mt-[16px] font-mitr text-[60px] tracking-305 text-[#F4BE04] text-shadow">
 						TOKENOMICS
 					</h2>
-					<span className="mb-[-25px] font-mogra text-[24px] tracking-305 text-white">
+					<a
+						href="https://bitcointalk.org/index.php?topic=349695.0"
+						target="_blank"
+						rel="noreferrer"
+						className="mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04]"
+					>
 						ARCHIVE LINK
-					</span>
+					</a>
 				</div>
 				<div className="mt-[100px] flex justify-center gap-x-[15px] font-mogra text-[22px] uppercase leading-[1.2] tracking-305 *:h-[300px] *:w-[520px] *:rounded-[15px] *:bg-white *:px-[28px] *:py-[20px]">
 					<div className="grid grid-cols-[1.5fr_1fr] items-center drop-shadow-bubble odd:*:text-[#404040] even:*:text-[#ED2C31]">
