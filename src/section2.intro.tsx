@@ -16,7 +16,7 @@ export default function Section2Intro() {
 					alt="Welcome to Bells coin"
 					width={859}
 					height={543}
-					className="absolute -left-[226px] bottom-[calc(100%+25px)]"
+					className="absolute -left-[226px] bottom-[calc(100%+25px)] origin-bottom-left scale-[80%] lg:scale-100"
 				/>
 				<h1 className="-ml-[4px] text-[56px] leading-[1.8] tracking-305 text-white">
 					Bells ($Bel) coin

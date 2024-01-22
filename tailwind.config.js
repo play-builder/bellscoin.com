@@ -29,6 +29,9 @@ export default {
 			},
 		},
 		letterSpacing: { 305: '0.305em' },
+		screens: {
+			lg: '1920px',
+		},
 	},
 	plugins: [
 		plugin(({ matchUtilities, theme }) => {
