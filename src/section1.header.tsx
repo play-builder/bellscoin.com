@@ -9,8 +9,8 @@ import {
 
 export default function Section1Header() {
 	return (
-		<header className="">
-			<nav className="flex h-[184px] w-full items-center justify-end space-x-[40px] bg-[#E60012] pr-[calc(9000%/1920)] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative *:z-[1] hover:*:text-[#FFE46A] focus:*:text-[#FFE46A] [&_li]:text-white focus-within:[&_li]:text-[#08835E] hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
+		<header>
+			<nav className="flex h-[184px] w-full items-center justify-end space-x-[40px] bg-[#E60012] pr-[calc(9000%/1920)] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative *:z-[1] focus-within:*:text-[#FFE46A] hover:*:text-[#FFE46A] [&_li]:text-white focus-within:[&_li]:text-[#08835E] hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
 				<div className="group" tabIndex={0}>
 					<span>BELSCAN</span>
 					<ul className="group-focus-within:visible group-hover:visible">
