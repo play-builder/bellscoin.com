@@ -1,8 +1,8 @@
+import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
+import bellsGenesis35 from '~/assets/Bells Genesis-35.png'
+import bellsGenesis6 from '~/assets/Bells Genesis-6.png'
 import bellBag from '~/assets/bell-bag.png'
 import coinex from '~/assets/coinex.svg'
-import dingCoin from '~/assets/ding-coin.png'
-import dingHeart from '~/assets/ding-heart.png'
-import dingMiner from '~/assets/ding-miner.png'
 import nkyc from '~/assets/nkyc.png'
 import pepeCex from '~/assets/pepe-cex.jpg'
 import pepeHappy from '~/assets/pepe-happy.jpg'
@@ -248,7 +248,7 @@ export default function Section6Buy() {
 				</p>
 			</div>
 			<div className="mx-auto mt-[166px] grid w-[1080px] grid-cols-[108px_1fr] items-center gap-x-[4px] text-[#505050] *:font-senior *:tracking-[0.015em] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[34px]">
-				<img src={dingCoin} alt="" width={104} height={90} />
+				<img src={bellsGenesis31} alt="" width={90} height={90} />
 				<h3 className="text-[#ED2C31]">Disclaimer</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
 					<span className="text-[#ED2C31]">$Bells</span> coin has no association
@@ -260,7 +260,7 @@ export default function Section6Buy() {
 					<br />
 					The coin is completely useless and for entertainment purposes only.
 				</p>
-				<img src={dingMiner} alt="" width={113} height={90} />
+				<img src={bellsGenesis6} alt="" width={90} height={90} />
 				<h3 className="text-[#08835E]">Donation</h3>
 				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
 					Bells coin is not pre-mined and is fully decentralized. The only
@@ -275,7 +275,7 @@ export default function Section6Buy() {
 						BCT6G3f8Z1s2aFxBMwWmTDp1Qk6k9twCRU
 					</span>
 				</p>
-				<img src={dingHeart} alt="" width={93} height={90} />
+				<img src={bellsGenesis35} alt="" width={90} height={90} />
 				<h3 className="text-[#1D644F]">Contact</h3>
 				<div className="col-start-2 mt-[10px] flex items-center gap-x-[32px] text-[#F0C10F]">
 					<Github width={44} />

@@ -1,4 +1,4 @@
-import dingCoin from '~/assets/ding-coin.png'
+import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
 import dogeTruck from '~/assets/doge-truck.png'
 import grass from '~/assets/grass.png'
 import soil from '~/assets/soil.png'
@@ -9,42 +9,42 @@ export default function Section5About() {
 	return (
 		<section className="bg-gradient-to-b from-[#7EE0FF] to-white pt-[300px] *:tracking-[0.015em]">
 			<div className="relative mx-auto w-[1080px]">
-				<div className="absolute -top-[100px] left-[52px]">
+				<div className="absolute -top-[100px] left-[56px]">
 					<img
-						src={dingCoin}
+						src={bellsGenesis31}
 						alt=""
-						width={166}
+						width={143}
 						height={143}
-						className="ml-[46px]"
+						className="ml-[50px]"
 					/>
 					<img
-						src={dingCoin}
+						src={bellsGenesis31}
 						alt=""
-						width={118}
+						width={101}
 						height={101}
 						className="-mt-[36px]"
 					/>
 					<img
-						src={dingCoin}
+						src={bellsGenesis31}
 						alt=""
-						width={76}
+						width={66}
 						height={66}
-						className="-mt-[49px] ml-[95px]"
+						className="-mt-[49px] ml-[92px]"
 					/>
 				</div>
-				<div className="absolute right-[84px]">
-					<img src={dingCoin} alt="" width={95} height={82} />
+				<div className="absolute right-[96px]">
+					<img src={bellsGenesis31} alt="" width={82} height={82} />
 					<img
-						src={dingCoin}
+						src={bellsGenesis31}
 						alt=""
-						width={135}
+						width={116}
 						height={116}
 						className="-mt-[17px] ml-[20px]"
 					/>
 					<img
-						src={dingCoin}
+						src={bellsGenesis31}
 						alt=""
-						width={76}
+						width={66}
 						height={66}
 						className="-mt-[65px]"
 					/>
