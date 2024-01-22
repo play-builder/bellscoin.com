@@ -77,7 +77,7 @@ export default function Section6Buy() {
 							href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
 							target="_blank"
 							rel="noreferrer"
-							className="text-[#4534FF]"
+							className="text-[#4534FF] hover:text-[#ED2C31] focus:text-[#ED2C31]"
 						>
 							here
 						</a>
@@ -210,6 +210,7 @@ export default function Section6Buy() {
 						href="https://nonkyc.io/market/BEL_USDT"
 						target="_blank"
 						rel="noreferrer"
+						className="hover:scale-105 focus:scale-105"
 					>
 						<img src={nkyc} alt="NKYC" width={94} height={90} />
 					</a>
@@ -217,6 +218,7 @@ export default function Section6Buy() {
 						href="https://xeggex.com/market/BEL_USDT"
 						target="_blank"
 						rel="noreferrer"
+						className="hover:scale-105 focus:scale-105"
 					>
 						<img src={xeggex} alt="XeggeX" width={215} height={67} />
 					</a>
@@ -224,6 +226,7 @@ export default function Section6Buy() {
 						href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
 						target="_blank"
 						rel="noreferrer"
+						className="hover:scale-105 focus:scale-105"
 					>
 						<img src={coinex} alt="CoinEx" width={189} />
 					</a>
@@ -236,7 +239,7 @@ export default function Section6Buy() {
 						href="https://t.co/4DCHZEdSSE"
 						target="_blank"
 						rel="noreferrer"
-						className="hover:text-white"
+						className="hover:text-white focus:text-white"
 					>
 						DISCORD
 					</a>

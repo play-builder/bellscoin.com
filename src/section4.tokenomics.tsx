@@ -111,7 +111,7 @@ export default function Section4Tokenomics() {
 						href="https://bitcointalk.org/index.php?topic=349695.0"
 						target="_blank"
 						rel="noreferrer"
-						className="mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04]"
+						className="mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04] focus:text-[#F4BE04]"
 					>
 						ARCHIVE LINK
 					</a>
