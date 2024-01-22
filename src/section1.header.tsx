@@ -11,9 +11,9 @@ export default function Section1Header() {
 	return (
 		<header className="">
 			<nav className="flex h-[184px] w-full items-center justify-end space-x-[40px] bg-[#E60012] pr-[calc(9000%/1920)] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative *:z-[1] hover:*:text-[#FFE46A] [&_li]:text-white hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
-				<div className="group">
+				<div className="group" tabIndex={0}>
 					<span>BELSCAN</span>
-					<ul className="group-hover:visible">
+					<ul className="group-focus-within:visible group-hover:visible">
 						<li>
 							<a href="https://belscan.io/" target="_blank" rel="noreferrer">
 								BELSCAN
@@ -41,9 +41,9 @@ export default function Section1Header() {
 					<br />
 					DOWNLOAD
 				</a>
-				<div className="group">
+				<div className="group" tabIndex={0}>
 					<span>WALLETS</span>
-					<ul className="group-hover:visible">
+					<ul className="group-focus-within:visible group-hover:visible">
 						<li>
 							<a
 								href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
@@ -90,7 +90,7 @@ export default function Section1Header() {
 				</div>
 				<div className="group">
 					<a href="#exchanges">EXCHANGES</a>
-					<ul className="group-hover:visible">
+					<ul className="group-focus-within:visible group-hover:visible">
 						<li>
 							<a
 								href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
@@ -120,9 +120,9 @@ export default function Section1Header() {
 						</li>
 					</ul>
 				</div>
-				<div className="group">
+				<div className="group" tabIndex={0}>
 					<span>ORDINALS</span>
-					<ul className="group-hover:visible">
+					<ul className="group-focus-within:visible group-hover:visible">
 						<li>
 							<a
 								href="https://bellscribe.com/"
