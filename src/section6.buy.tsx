@@ -200,17 +200,46 @@ export default function Section6Buy() {
 					</p>
 				</div>
 			</div>
-			<div className="mt-[150px] text-center *:tracking-[0.015em]">
+			<div
+				id="exchanges"
+				className="mt-[100px] pt-[50px] text-center *:tracking-[0.015em]"
+			>
 				<h3 className="font-chelsea text-[60px]">Listing exchanges</h3>
 				<div className="mt-[48px] flex items-center justify-center gap-x-[80px]">
-					<img src={nkyc} alt="NKYC" width={94} height={90} />
-					<img src={xeggex} alt="XeggeX" width={215} height={67} />
-					<img src={coinex} alt="CoinEx" width={189} />
+					<a
+						href="https://nonkyc.io/market/BEL_USDT"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={nkyc} alt="NKYC" width={94} height={90} />
+					</a>
+					<a
+						href="https://xeggex.com/market/BEL_USDT"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={xeggex} alt="XeggeX" width={215} height={67} />
+					</a>
+					<a
+						href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
+						target="_blank"
+						rel="noreferrer"
+					>
+						<img src={coinex} alt="CoinEx" width={189} />
+					</a>
 				</div>
 				<p className="mt-[66px] font-senior text-[24px] leading-[1.5]">
 					AND WE NEED MORE..
 					<br />
-					CONTACT TO DISCORD
+					CONTACT TO{' '}
+					<a
+						href="https://t.co/4DCHZEdSSE"
+						target="_blank"
+						rel="noreferrer"
+						className="hover:text-white"
+					>
+						DISCORD
+					</a>
 					<br />
 					IF YOU LIKE <span className="text-[#ED2C31]">$BELLS</span>
 				</p>
