@@ -63,13 +63,14 @@ Chart.register(
 )
 
 /**
- * Absolutely positioned elements may need to be adjusted if there are data updates.
+ * When data is updated or the chart size changes,
+ * you may need to adjust absolutely positioned elements.
  */
 
 export function EmissionChart() {
 	return (
 		<div className="relative mx-auto w-[1280px]">
-			<div className="absolute right-[12px] top-[16px] h-[540px] w-[720px] bg-gradient-to-r from-[rgba(43,105,97,0.2)] to-[rgba(24,255,175,0)]">
+			<div className="absolute right-[12px] top-[20px] h-[532px] w-[714px] bg-gradient-to-r from-[rgba(43,105,97,0.2)] to-[rgba(24,255,175,0)]">
 				<div className="absolute top-[calc(50%-2px)] h-[1px] w-full bg-[#08835E]" />
 				<div className="absolute -right-[2px] top-[calc(50%-5px)] h-[7px] w-[7px] bg-[#08835E] [clip-path:polygon(86.6%_50%,0_0,0_100%)]"></div>
 				<div className="absolute top-1/2 h-[2px] w-[calc(100%-13px)] bg-[#08835E]" />
@@ -85,10 +86,10 @@ export function EmissionChart() {
 					</span>
 				</p>
 			</div>
-			<span className="absolute bottom-[92px] left-[160px] font-mogra text-[24px] leading-[1.2] tracking-305 text-[#ED2C31]">
+			<span className="absolute bottom-[92px] left-[168px] font-mogra text-[24px] leading-[1.2] tracking-305 text-[#ED2C31]">
 				EPOCH1
 			</span>
-			<span className="absolute bottom-[140px] left-[176px] font-mogra text-[24px] leading-[1.2] tracking-305 text-[#ED2C31]">
+			<span className="absolute bottom-[140px] left-[184px] font-mogra text-[24px] leading-[1.2] tracking-305 text-[#ED2C31]">
 				EPOCH2
 			</span>
 			<span className="absolute bottom-[300px] left-[248px] font-mogra text-[24px] leading-[1.2] tracking-305 text-[#ED2C31]">
@@ -141,9 +142,6 @@ export function EmissionChart() {
 									yMax: 60_000_000,
 								},
 							},
-						},
-						legend: {
-							labels: {},
 						},
 						tooltip: {
 							mode: 'index',
@@ -206,6 +204,7 @@ export function EmissionChart() {
 									family: "'Mogra', system-ui",
 									size: 20,
 								},
+								padding: 8,
 							},
 						},
 					},
