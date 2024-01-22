@@ -61,13 +61,15 @@ export default function Section3History() {
 							<div className="-mt-[8px] ml-[0] h-[42px] w-[42px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 							<div className="ml-[0] mt-[15px] h-[32px] w-[32px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 							<div className="ml-[42px] mt-[12px] h-[22px] w-[22px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-							<img
-								src={bellBag}
-								alt="bell bag"
-								width={191}
-								height={238}
-								className="-mt-[10px] ml-[42px] -scale-x-100"
-							/>
+							<div className="animate-[jump-shaking_.5s_infinite]">
+								<img
+									src={bellBag}
+									alt="bell bag"
+									width={191}
+									height={238}
+									className="-mt-[10px] ml-[42px] -scale-x-100"
+								/>
+							</div>
 						</div>
 						<div className="flex">
 							<img
@@ -75,6 +77,7 @@ export default function Section3History() {
 								alt="doge on tesla"
 								width={400}
 								height={400}
+								className="animate-[jump-shaking-2_.5s_linear_infinite]"
 							/>
 							<div className="ml-[22px] mt-[5px] flex-shrink-0">
 								<div className="relative ml-[112px]">

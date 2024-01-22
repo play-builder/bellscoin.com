@@ -51,13 +51,15 @@ export default function Section2Intro() {
 						Proof of work
 					</p>
 					<div className="relative -left-[80px] top-[40px] flex">
-						<img
-							src={bellBag}
-							alt="bell bag"
-							width={262}
-							height={333}
-							className="absolute left-[140px] top-[196px] rotate-[11deg] drop-shadow-[14px_14px_15px_#313131]"
-						/>
+						<div className="absolute left-[140px] top-[196px] animate-[jump-shaking_.5s_infinite]">
+							<img
+								src={bellBag}
+								alt="bell bag"
+								width={262}
+								height={333}
+								className="rotate-[11deg] drop-shadow-[14px_14px_15px_#313131]"
+							/>
+						</div>
 						<div className="flex-shrink-0">
 							<div className="relative">
 								<img

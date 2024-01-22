@@ -1,14 +1,65 @@
+import { useEffect, useRef, useState } from 'react'
+
 import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
+import apple from '~/assets/apple.png'
+import cloud from '~/assets/cloud.png'
 import dogeTruck from '~/assets/doge-truck.png'
+import garland from '~/assets/garland.png'
 import grass from '~/assets/grass.png'
+import orange from '~/assets/orange.png'
 import soil from '~/assets/soil.png'
 import speechBubble from '~/assets/speech-bubble.png'
 import sprout from '~/assets/sprout.png'
 
 export default function Section5About() {
 	return (
-		<section className="bg-gradient-to-b from-[#7EE0FF] to-white pt-[300px] *:tracking-[0.015em]">
-			<div className="relative mx-auto w-[1080px]">
+		<section className="relative overflow-hidden bg-gradient-to-b from-[#7EE0FF] to-white *:tracking-[0.015em]">
+			<BackgroundClouds />
+			<div className="relative min-w-[1920px] [&>:not(:first-child)]:absolute [&>:not(:first-child)]:origin-top">
+				<img src={garland} alt="" height={200} className="h-[200px] w-full" />
+				<div className="left-[32px] top-[60px] animate-[pendulum_0.8s_linear_alternate_infinite]">
+					<img
+						src={orange}
+						alt=""
+						width={78}
+						className="rotate-[30deg] -scale-x-100"
+					/>
+				</div>
+				<div className="left-[calc(14200%/1920)] top-[52px] animate-[pendulum_0.8s_linear_0.2s_alternate_infinite]">
+					<img src={apple} alt="" width={100} className="rotate-[15deg]" />
+				</div>
+				<div className="left-[calc(36000%/1920)] top-[120px] animate-[pendulum_0.6s_linear_0.2s_alternate_infinite]">
+					<img src={orange} alt="" width={71} className="-rotate-[15deg]" />
+				</div>
+				<div className="left-[calc(55800%/1920)] top-[140px] animate-[pendulum_0.9s_linear_0.1s_alternate_infinite]">
+					<img src={orange} alt="" width={71} className="-rotate-[15deg]" />
+				</div>
+				<div className="right-[calc(97200%/1920)] top-[104px] animate-[pendulum_0.6s_linear_0.2s_alternate_infinite]">
+					<img src={apple} alt="" width={112} className="rotate-[15deg]" />
+				</div>
+				<img
+					src={orange}
+					alt=""
+					width={104}
+					className="right-[calc(71000%/1920)] top-[149px] animate-[pendulum_1s_linear_0.2s_alternate_infinite]"
+				/>
+				<div className="right-[calc(41700%/1920)] top-[72px] animate-[pendulum_0.9s_linear_0.3s_alternate_infinite]">
+					<img src={apple} alt="" width={156} className="rotate-[25deg]" />
+				</div>
+				<img
+					src={orange}
+					alt=""
+					width={57}
+					className="right-[calc(27400%/1920)] top-[140px] animate-[pendulum_0.2s_linear_alternate_infinite]"
+				/>
+				<img
+					src={apple}
+					alt=""
+					width={74}
+					className="-right-[12px] top-[84px] animate-[pendulum_0.5s_linear_0.1s_alternate_infinite]"
+				/>
+			</div>
+			<div className="relative mx-auto mt-[200px] w-[1080px]">
 				<div className="absolute -top-[100px] left-[56px]">
 					<img
 						src={bellsGenesis31}
@@ -55,7 +106,7 @@ export default function Section5About() {
 					Bells coin
 				</h2>
 			</div>
-			<article className="mx-auto mt-[200px] w-[1080px] max-w-[1320px] font-senior text-[34px] leading-[60px] text-[#08835E]">
+			<article className="relative mx-auto mt-[200px] w-[1080px] max-w-[1320px] font-senior text-[34px] leading-[60px] text-[#08835E]">
 				<h3 className="font-senior text-[60px] leading-[1] text-[#691823]">
 					Roadmap
 				</h3>
@@ -90,7 +141,7 @@ export default function Section5About() {
 				</ol>
 			</article>
 			<div className="relative mt-[668px]">
-				<div className="absolute bottom-[360px] right-[calc(36800%/1920)]">
+				<div className="absolute bottom-[360px] right-[calc(36800%/1920)] w-max animate-[slide-left_7s_linear_infinite,rattling_2s_linear_infinite]">
 					<div className="absolute -top-[344px] left-[260px]">
 						<div className="relative">
 							<img
@@ -142,5 +193,53 @@ export default function Section5About() {
 				></div>
 			</div>
 		</section>
+	)
+}
+
+function BackgroundClouds() {
+	const container = useRef<HTMLDivElement>(null)
+	const [m, setM] = useState(0)
+	const [n, setN] = useState(0)
+	const cellSize = 800
+
+	useEffect(() => {
+		if (!container?.current) {
+			return
+		}
+
+		setM(Math.ceil(container.current.clientHeight / cellSize))
+		setN(Math.ceil(container.current.clientWidth / cellSize))
+	}, [container])
+
+	return (
+		<div
+			ref={container}
+			className="absolute left-0 top-0 grid h-full w-full place-items-center overflow-hidden"
+			style={{
+				gridTemplate: `repeat(${m}, 1fr) / repeat(${n}, 1fr)`,
+				gap: '80px',
+			}}
+		>
+			{Array(m * n)
+				.fill(null)
+				.map((_, i) => {
+					const x = Math.random() * cellSize - cellSize / 2
+					const y = Math.random() * cellSize - cellSize / 2
+
+					return (
+						<img
+							key={i}
+							src={cloud}
+							alt="cloud"
+							width={150 * (0.2 + Math.random())}
+							style={{
+								animation: `horizontal-shaking ${2 + Math.random()}s infinite`,
+								marginLeft: `${x}px`,
+								marginTop: `${y}px`,
+							}}
+						/>
+					)
+				})}
+		</div>
 	)
 }
