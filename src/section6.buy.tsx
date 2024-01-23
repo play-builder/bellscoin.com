@@ -26,189 +26,189 @@ import {
 
 export default function Section6Buy() {
 	return (
-		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[100px] pt-[260px] *:tracking-[0.015em]">
-			<div className="relative mx-auto w-[1080px]">
-				<div className="absolute -left-[28px] -top-[124px]">
-					<img
-						src={bellBag}
-						alt=""
-						width={84}
-						height={100}
-						className="-rotate-[15deg] -scale-x-100"
-					/>
-					<img
-						src={bellBag}
-						alt=""
-						width={140}
-						height={167}
-						className="-translate-y-[96px] translate-x-[36px] -rotate-[15deg]"
-					/>
-				</div>
-				<div className="absolute right-[52px] top-[92px]">
-					<img
-						src={bellBag}
-						alt=""
-						width={68}
-						height={82}
-						className="rotate-[15deg] -scale-x-100"
-					/>
-					<img
-						src={bellBag}
-						alt=""
-						width={140}
-						height={169}
-						className="-translate-y-[176px] translate-x-[54px] rotate-[15deg]"
-					/>
-				</div>
-				<h2 className="text-center font-senior text-[60px] text-[#056242]">
-					How to buy?
-				</h2>
-			</div>
-			<div className="relative z-0 mt-[100px] overflow-hidden pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
+		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[100px] *:tracking-[0.015em]">
+			<div className="relative overflow-hidden pt-[260px]">
 				<BackgroundMeteor />
-				<div className="mx-auto w-[1080px]">
-					<div className="flex items-center gap-x-[44px]">
+				<div className="relative mx-auto w-[1080px]">
+					<div className="absolute -left-[28px] -top-[124px]">
 						<img
-							src={pepeMining}
-							alt="Pepe is mining"
-							width={520}
-							height={520}
+							src={bellBag}
+							alt=""
+							width={84}
+							height={100}
+							className="-rotate-[15deg] -scale-x-100"
 						/>
-						<p className="">
-							Download <span className="text-[#ED2C31]">Qt wallet</span>
-							<br />
-							and mine <span className="text-[#ED2C31]">$Bel</span> by
-							<br />
-							yourself.
-							<br />
-							You can download the
-							<br />
-							wallet(Node)...
-							<a
-								href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
-								target="_blank"
-								rel="noreferrer"
-								className="text-[#4534FF] hover:text-[#ED2C31] focus:text-[#ED2C31]"
-							>
-								here
-							</a>
-						</p>
+						<img
+							src={bellBag}
+							alt=""
+							width={140}
+							height={167}
+							className="-translate-y-[96px] translate-x-[36px] -rotate-[15deg]"
+						/>
 					</div>
-					<div className="relative h-[312px]">
-						<div className="flex h-full w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="red"
-								direction="down"
-								number={10}
-								size={24}
-							/>
-						</div>
-						<div className="absolute -top-[14px] left-[272px] flex h-full w-[560px] items-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#08835E"
-								direction="right"
-								firstOn={false}
-								number={20}
-								size={24}
-							/>
-						</div>
-						<div className="absolute right-0 top-1/2 flex h-1/2 w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#08835E"
-								direction="down"
-								firstOn={false}
-								number={5}
-								size={24}
-							/>
-						</div>
+					<div className="absolute right-[52px] top-[92px]">
+						<img
+							src={bellBag}
+							alt=""
+							width={68}
+							height={82}
+							className="rotate-[15deg] -scale-x-100"
+						/>
+						<img
+							src={bellBag}
+							alt=""
+							width={140}
+							height={169}
+							className="-translate-y-[176px] translate-x-[54px] rotate-[15deg]"
+						/>
 					</div>
-					<div className="flex justify-between">
-						<div className="flex flex-col items-center">
-							<img src={pepeHappy} alt="" width={520} height={520} />
-							<p className="mt-[24px] text-center">
-								If you mine,
+					<h2 className="text-center font-senior text-[60px] text-[#056242]">
+						How to buy?
+					</h2>
+					<div className="relative z-0 overflow-hidden pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
+						<div className="mt-[100px] flex items-center gap-x-[44px]">
+							<img
+								src={pepeMining}
+								alt="Pepe is mining"
+								width={520}
+								height={520}
+							/>
+							<p className="">
+								Download <span className="text-[#ED2C31]">Qt wallet</span>
 								<br />
-								you will be happy
+								and mine <span className="text-[#ED2C31]">$Bel</span> by
+								<br />
+								yourself.
+								<br />
+								You can download the
+								<br />
+								wallet(Node)...
+								<a
+									href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
+									target="_blank"
+									rel="noreferrer"
+									className="text-[#4534FF] hover:text-[#ED2C31] focus:text-[#ED2C31]"
+								>
+									here
+								</a>
 							</p>
 						</div>
+						<div className="relative h-[312px]">
+							<div className="flex h-full w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="red"
+									direction="down"
+									number={10}
+									size={24}
+								/>
+							</div>
+							<div className="absolute -top-[14px] left-[272px] flex h-full w-[560px] items-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="right"
+									firstOn={false}
+									number={20}
+									size={24}
+								/>
+							</div>
+							<div className="absolute right-0 top-1/2 flex h-1/2 w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="down"
+									firstOn={false}
+									number={5}
+									size={24}
+								/>
+							</div>
+						</div>
+						<div className="flex justify-between">
+							<div className="flex flex-col items-center">
+								<img src={pepeHappy} alt="" width={520} height={520} />
+								<p className="mt-[24px] text-center">
+									If you mine,
+									<br />
+									you will be happy
+								</p>
+							</div>
+							<div className="flex flex-col items-center">
+								<img src={pepeCex} alt="" width={520} height={520} />
+								<p className="mt-[24px] text-center">
+									You can also buy
+									<br />
+									some <span className="text-[#ED2C31]">$Bel</span> on CEX
+								</p>
+							</div>
+						</div>
+						<div className="relative h-[312px]">
+							<div className="flex h-1/2 w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#ED2C31"
+									direction="down"
+									number={5}
+									size={24}
+								/>
+							</div>
+							<div className="absolute right-0 top-0 flex h-1/2 w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="down"
+									number={5}
+									size={24}
+								/>
+							</div>
+							<div className="absolute left-[268px] top-0 flex h-1/2 w-[260px] items-end">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#ED2C31"
+									direction="right"
+									firstOn={false}
+									number={8}
+									size={24}
+								/>
+							</div>
+							<div className="absolute right-[268px] top-0 flex h-1/2 w-[260px] items-end">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="left"
+									number={8}
+									size={24}
+								/>
+							</div>
+							<div className="absolute left-[254px] flex h-1/2 w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#ED2C31"
+									direction="down"
+									firstOn={false}
+									number={5}
+									size={24}
+								/>
+							</div>
+							<div className="absolute right-[254px] flex h-1/2 w-[520px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="down"
+									firstOn={false}
+									number={5}
+									size={24}
+								/>
+							</div>
+						</div>
 						<div className="flex flex-col items-center">
-							<img src={pepeCex} alt="" width={520} height={520} />
+							<img src={pepeMoon} alt="" width={520} height={520} />
 							<p className="mt-[24px] text-center">
-								You can also buy
+								HODL and
 								<br />
-								some <span className="text-[#ED2C31]">$Bel</span> on CEX
+								Go to the moon
 							</p>
 						</div>
-					</div>
-					<div className="relative h-[312px]">
-						<div className="flex h-1/2 w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#ED2C31"
-								direction="down"
-								number={5}
-								size={24}
-							/>
-						</div>
-						<div className="absolute right-0 top-0 flex h-1/2 w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#08835E"
-								direction="down"
-								number={5}
-								size={24}
-							/>
-						</div>
-						<div className="absolute left-[268px] top-0 flex h-1/2 w-[260px] items-end">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#ED2C31"
-								direction="right"
-								firstOn={false}
-								number={8}
-								size={24}
-							/>
-						</div>
-						<div className="absolute right-[268px] top-0 flex h-1/2 w-[260px] items-end">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#08835E"
-								direction="left"
-								number={8}
-								size={24}
-							/>
-						</div>
-						<div className="absolute left-[254px] flex h-1/2 w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#ED2C31"
-								direction="down"
-								firstOn={false}
-								number={5}
-								size={24}
-							/>
-						</div>
-						<div className="absolute right-[254px] flex h-1/2 w-[520px] justify-center">
-							<SequenceArrows
-								colorOff="white"
-								colorOn="#08835E"
-								direction="down"
-								firstOn={false}
-								number={5}
-								size={24}
-							/>
-						</div>
-					</div>
-					<div className="flex flex-col items-center">
-						<img src={pepeMoon} alt="" width={520} height={520} />
-						<p className="mt-[24px] text-center">
-							HODL and
-							<br />
-							Go to the moon
-						</p>
 					</div>
 				</div>
 			</div>
@@ -265,10 +265,10 @@ export default function Section6Buy() {
 				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
 					<span className="text-[#ED2C31]">$Bells</span> coin has no association
 					with{' '}
-					<span className="text-[#ED2C31]">“Animal Crossing” of Nintendo</span>.
-					This coin is simply paying homage to a meme we all love and recognize.
-					$Bells is a meme coin with no intrinsic value or expectation of
-					financial return. There is no formal team or roadmap.
+					<span className="text-[#ED2C31]">“Animal Crossing” of Nintendo</span>
+					. This coin is simply paying homage to a meme we all love and
+					recognize. $Bells is a meme coin with no intrinsic value or
+					expectation of financial return. There is no formal team or roadmap.
 					<br />
 					The coin is completely useless and for entertainment purposes only.
 				</p>
@@ -322,13 +322,21 @@ function BackgroundMeteor() {
 
 		setM(Math.ceil(d / cellSize))
 		setN(Math.ceil(d / cellSize))
-	}, [container])
+
+		const resizeHandler = () => {
+			setM(0)
+			setN(0)
+		}
+		window.addEventListener('resize', resizeHandler)
+		return () => {
+			window.removeEventListener('resize', resizeHandler)
+		}
+	}, [m, n])
 
 	return (
 		<div
 			ref={container}
-			className="absolute left-1/2 top-1/2 -z-[1] h-full w-screen -translate-x-1/2 -translate-y-1/2 rotate-[30deg] overflow-hidden"
-			style={{}}
+			className="absolute left-1/2 top-1/2 h-full w-screen -translate-x-1/2 -translate-y-1/2 rotate-[30deg] overflow-hidden"
 		>
 			{Array(m * n)
 				.fill(null)
@@ -363,27 +371,9 @@ function BackgroundMeteor() {
 									alt=""
 									className="absolute -top-1/2 left-1/3 -z-[1] -rotate-[30deg]"
 								/>
-								<img
-									src={bellBag}
-									alt="bell bag"
-									width={156}
-									height={136}
-									className=""
-								/>
+								<img src={bellBag} alt="bell bag" width={156} height={136} />
 							</div>
 						</div>
-						// <img
-						// 	// src={cloud}
-						// 	// alt="cloud"
-						// 	width={150 * (0.2 + Math.random())}
-						// 	style={{
-						// 		animation: `horizontal-shaking ${
-						// 			2 + Math.random()
-						// 		}s infinite`,
-						// 		marginLeft: `${x}px`,
-						// 		marginTop: `${y}px`,
-						// 	}}
-						// />
 					)
 				})}
 		</div>
