@@ -76,6 +76,10 @@ export default {
 					'87.5%': { transform: 'translate(0, 10px)' },
 					'100%': { transform: 'translate(0, 0)' },
 				},
+				'slide-down': {
+					from: { top: '0%' },
+					to: { top: '100%' },
+				},
 				'slide-left': {
 					from: { right: '-40%' },
 					to: { right: '100%' },

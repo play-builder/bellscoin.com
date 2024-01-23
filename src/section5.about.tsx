@@ -232,6 +232,7 @@ function BackgroundClouds() {
 							src={cloud}
 							alt="cloud"
 							width={150 * (0.2 + Math.random())}
+							className="animate-[horizontal-shaking]"
 							style={{
 								animation: `horizontal-shaking ${2 + Math.random()}s infinite`,
 								marginLeft: `${x}px`,

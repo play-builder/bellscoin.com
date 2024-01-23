@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react'
+
 import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
 import bellsGenesis35 from '~/assets/Bells Genesis-35.png'
 import bellsGenesis6 from '~/assets/Bells Genesis-6.png'
@@ -8,6 +10,8 @@ import pepeCex from '~/assets/pepe-cex.jpg'
 import pepeHappy from '~/assets/pepe-happy.jpg'
 import pepeMining from '~/assets/pepe-mining.jpg'
 import pepeMoon from '~/assets/pepe-moon.jpg'
+import trail1 from '~/assets/trail-1.svg'
+import trail2 from '~/assets/trail-2.svg'
 import xeggex from '~/assets/xeggex.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 
@@ -60,149 +64,157 @@ export default function Section6Buy() {
 					How to buy?
 				</h2>
 			</div>
-			<div className="mx-auto mt-[100px] w-[1080px] font-senior text-[24px] leading-[1.33] text-[#691823]">
-				<div className="flex items-center gap-x-[44px]">
-					<img src={pepeMining} alt="Pepe is mining" width={520} height={520} />
-					<p className="">
-						Download <span className="text-[#ED2C31]">Qt wallet</span>
-						<br />
-						and mine <span className="text-[#ED2C31]">$Bel</span> by
-						<br />
-						yourself.
-						<br />
-						You can download the
-						<br />
-						wallet(Node)...
-						<a
-							href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
-							target="_blank"
-							rel="noreferrer"
-							className="text-[#4534FF] hover:text-[#ED2C31] focus:text-[#ED2C31]"
-						>
-							here
-						</a>
-					</p>
-				</div>
-				<div className="relative h-[312px]">
-					<div className="flex h-full w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="red"
-							direction="down"
-							number={10}
-							size={24}
+			<div className="relative z-0 mt-[100px] overflow-hidden pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
+				<BackgroundMeteor />
+				<div className="mx-auto w-[1080px]">
+					<div className="flex items-center gap-x-[44px]">
+						<img
+							src={pepeMining}
+							alt="Pepe is mining"
+							width={520}
+							height={520}
 						/>
-					</div>
-					<div className="absolute -top-[14px] left-[272px] flex h-full w-[560px] items-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#08835E"
-							direction="right"
-							firstOn={false}
-							number={20}
-							size={24}
-						/>
-					</div>
-					<div className="absolute right-0 top-1/2 flex h-1/2 w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#08835E"
-							direction="down"
-							firstOn={false}
-							number={5}
-							size={24}
-						/>
-					</div>
-				</div>
-				<div className="flex justify-between">
-					<div className="flex flex-col items-center">
-						<img src={pepeHappy} alt="" width={520} height={520} />
-						<p className="mt-[24px] text-center">
-							If you mine,
+						<p className="">
+							Download <span className="text-[#ED2C31]">Qt wallet</span>
 							<br />
-							you will be happy
+							and mine <span className="text-[#ED2C31]">$Bel</span> by
+							<br />
+							yourself.
+							<br />
+							You can download the
+							<br />
+							wallet(Node)...
+							<a
+								href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
+								target="_blank"
+								rel="noreferrer"
+								className="text-[#4534FF] hover:text-[#ED2C31] focus:text-[#ED2C31]"
+							>
+								here
+							</a>
 						</p>
 					</div>
+					<div className="relative h-[312px]">
+						<div className="flex h-full w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="red"
+								direction="down"
+								number={10}
+								size={24}
+							/>
+						</div>
+						<div className="absolute -top-[14px] left-[272px] flex h-full w-[560px] items-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#08835E"
+								direction="right"
+								firstOn={false}
+								number={20}
+								size={24}
+							/>
+						</div>
+						<div className="absolute right-0 top-1/2 flex h-1/2 w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#08835E"
+								direction="down"
+								firstOn={false}
+								number={5}
+								size={24}
+							/>
+						</div>
+					</div>
+					<div className="flex justify-between">
+						<div className="flex flex-col items-center">
+							<img src={pepeHappy} alt="" width={520} height={520} />
+							<p className="mt-[24px] text-center">
+								If you mine,
+								<br />
+								you will be happy
+							</p>
+						</div>
+						<div className="flex flex-col items-center">
+							<img src={pepeCex} alt="" width={520} height={520} />
+							<p className="mt-[24px] text-center">
+								You can also buy
+								<br />
+								some <span className="text-[#ED2C31]">$Bel</span> on CEX
+							</p>
+						</div>
+					</div>
+					<div className="relative h-[312px]">
+						<div className="flex h-1/2 w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#ED2C31"
+								direction="down"
+								number={5}
+								size={24}
+							/>
+						</div>
+						<div className="absolute right-0 top-0 flex h-1/2 w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#08835E"
+								direction="down"
+								number={5}
+								size={24}
+							/>
+						</div>
+						<div className="absolute left-[268px] top-0 flex h-1/2 w-[260px] items-end">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#ED2C31"
+								direction="right"
+								firstOn={false}
+								number={8}
+								size={24}
+							/>
+						</div>
+						<div className="absolute right-[268px] top-0 flex h-1/2 w-[260px] items-end">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#08835E"
+								direction="left"
+								number={8}
+								size={24}
+							/>
+						</div>
+						<div className="absolute left-[254px] flex h-1/2 w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#ED2C31"
+								direction="down"
+								firstOn={false}
+								number={5}
+								size={24}
+							/>
+						</div>
+						<div className="absolute right-[254px] flex h-1/2 w-[520px] justify-center">
+							<SequenceArrows
+								colorOff="white"
+								colorOn="#08835E"
+								direction="down"
+								firstOn={false}
+								number={5}
+								size={24}
+							/>
+						</div>
+					</div>
 					<div className="flex flex-col items-center">
-						<img src={pepeCex} alt="" width={520} height={520} />
+						<img src={pepeMoon} alt="" width={520} height={520} />
 						<p className="mt-[24px] text-center">
-							You can also buy
+							HODL and
 							<br />
-							some <span className="text-[#ED2C31]">$Bel</span> on CEX
+							Go to the moon
 						</p>
 					</div>
-				</div>
-				<div className="relative h-[312px]">
-					<div className="flex h-1/2 w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#ED2C31"
-							direction="down"
-							number={5}
-							size={24}
-						/>
-					</div>
-					<div className="absolute right-0 top-0 flex h-1/2 w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#08835E"
-							direction="down"
-							number={5}
-							size={24}
-						/>
-					</div>
-					<div className="absolute left-[268px] top-0 flex h-1/2 w-[260px] items-end">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#ED2C31"
-							direction="right"
-							firstOn={false}
-							number={8}
-							size={24}
-						/>
-					</div>
-					<div className="absolute right-[268px] top-0 flex h-1/2 w-[260px] items-end">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#08835E"
-							direction="left"
-							number={8}
-							size={24}
-						/>
-					</div>
-					<div className="absolute left-[254px] flex h-1/2 w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#ED2C31"
-							direction="down"
-							firstOn={false}
-							number={5}
-							size={24}
-						/>
-					</div>
-					<div className="absolute right-[254px] flex h-1/2 w-[520px] justify-center">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#08835E"
-							direction="down"
-							firstOn={false}
-							number={5}
-							size={24}
-						/>
-					</div>
-				</div>
-				<div className="flex flex-col items-center">
-					<img src={pepeMoon} alt="" width={520} height={520} />
-					<p className="mt-[24px] text-center">
-						HODL and
-						<br />
-						Go to the moon
-					</p>
 				</div>
 			</div>
 			<div
 				id="exchanges"
-				className="mt-[100px] pt-[50px] text-center *:tracking-[0.015em]"
+				className="pt-[50px] text-center *:tracking-[0.015em]"
 			>
 				<h3 className="font-chelsea text-[60px]">Listing exchanges</h3>
 				<div className="mt-[48px] flex items-center justify-center gap-x-[80px]">
@@ -287,5 +299,93 @@ export default function Section6Buy() {
 				</div>
 			</div>
 		</section>
+	)
+}
+
+function BackgroundMeteor() {
+	const container = useRef<HTMLDivElement>(null)
+	const [m, setM] = useState(0)
+	const [n, setN] = useState(0)
+	const cellSize = 400
+
+	useEffect(() => {
+		if (!container?.current) {
+			return
+		}
+
+		const w = container.current.parentElement!.clientWidth
+		const h = container.current.parentElement!.clientHeight
+		const d = Math.sqrt(w * w + h * h)
+
+		container.current.style.width = `${d}px`
+		container.current.style.height = `${d}px`
+
+		setM(Math.ceil(d / cellSize))
+		setN(Math.ceil(d / cellSize))
+	}, [container])
+
+	return (
+		<div
+			ref={container}
+			className="absolute left-1/2 top-1/2 -z-[1] h-full w-screen -translate-x-1/2 -translate-y-1/2 rotate-[30deg] overflow-hidden"
+			style={{}}
+		>
+			{Array(m * n)
+				.fill(null)
+				.map((_, i) => {
+					const x = container.current!.clientWidth * Math.random()
+					const y = 300 * Math.random()
+
+					return (
+						<div
+							key={i}
+							className="absolute animate-[slide-down]"
+							style={{
+								animation: `slide-down ${
+									5 + 5 * Math.random()
+								}s ease-in infinite ${
+									i % 2 === 0 ? 4 * Math.random() : 3 + 3 * Math.random()
+								}s`,
+							}}
+						>
+							<div
+								className="relative -z-[1] opacity-80"
+								style={{
+									marginLeft: `${x}px`,
+									marginTop: `-${y}px`,
+									transform: `scale(${
+										0.3 + 0.8 * Math.random()
+									}) translateY(-100%)`,
+								}}
+							>
+								<img
+									src={Math.random() < 0.5 ? trail1 : trail2}
+									alt=""
+									className="absolute -top-1/2 left-1/3 -z-[1] -rotate-[30deg]"
+								/>
+								<img
+									src={bellBag}
+									alt="bell bag"
+									width={156}
+									height={136}
+									className=""
+								/>
+							</div>
+						</div>
+						// <img
+						// 	// src={cloud}
+						// 	// alt="cloud"
+						// 	width={150 * (0.2 + Math.random())}
+						// 	style={{
+						// 		animation: `horizontal-shaking ${
+						// 			2 + Math.random()
+						// 		}s infinite`,
+						// 		marginLeft: `${x}px`,
+						// 		marginTop: `${y}px`,
+						// 	}}
+						// />
+					)
+				})}
+		</div>
 	)
 }
