@@ -8,6 +8,20 @@ import starWand from '~/assets/star-wand.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { EmissionChart } from '~/section4.chart.tsx'
 
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.toggle(
+					'animate-[pop_0.5s_cubic-bezier(0.575,0.000,0.500,1.520)_forwards]',
+					true,
+				)
+			}
+		})
+	},
+	{ threshold: 0.5 },
+)
+
 export default function Section4Tokenomics() {
 	const [currentSupply, setCurrentSupply] = useState<
 		number | 'loading' | 'not available'
@@ -201,18 +215,24 @@ export default function Section4Tokenomics() {
 				<div className="mt-[176px] grid grid-cols-[1fr_170px_1fr] [&>*:nth-child(3n+1)]:justify-self-end">
 					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
 							src={bellBag}
 							alt=""
 							width={153}
 							height={182}
-							className="absolute -left-[70px] -top-[94px]"
+							className="absolute -left-[70px] -top-[94px] scale-0"
 						/>
 						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
 							src={bellBag}
 							alt=""
 							width={153}
 							height={182}
-							className="absolute -top-[94px] left-[8px]"
+							className="absolute -top-[94px] left-[8px] scale-0"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
 							EPOCH
@@ -258,11 +278,14 @@ export default function Section4Tokenomics() {
 					</div>
 					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
 							src={bellBag}
 							alt=""
 							width={150}
 							height={180}
-							className="absolute -left-[53px] -top-[91px]"
+							className="absolute -left-[53px] -top-[91px] scale-0"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
 							EPOCH
@@ -311,11 +334,14 @@ export default function Section4Tokenomics() {
 					</div>
 					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
 							src={bellCoins}
 							alt=""
 							width={156}
 							height={113}
-							className="absolute -left-[40px] -top-[36px]"
+							className="absolute -left-[40px] -top-[36px] scale-0"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
 							EPOCH
@@ -351,11 +377,14 @@ export default function Section4Tokenomics() {
 					</div>
 					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
 						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
 							src={bellBag}
 							alt=""
 							width={105}
 							height={126}
-							className="absolute -left-[29px] -top-[43px]"
+							className="absolute -left-[29px] -top-[43px] scale-0"
 						/>
 						<h4 className="px-[36px] text-right text-[34px] tracking-305">
 							EPOCH

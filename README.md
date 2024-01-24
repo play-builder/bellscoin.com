@@ -5,6 +5,7 @@
 - change emission schedule from csv to calculating
 - detailed chart tooltip
 - image optimization
+- cleanup unused animations
 
 # React + TypeScript + Vite
 

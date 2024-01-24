@@ -24,6 +24,20 @@ import {
 	Twitter,
 } from './component/ContactIcon.tsx'
 
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.toggle(
+					'animate-[pop_0.5s_cubic-bezier(0.575,0.000,0.500,1.520)_forwards]',
+					true,
+				)
+			}
+		})
+	},
+	{ threshold: 0.5 },
+)
+
 export default function Section6Buy() {
 	return (
 		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[100px] *:tracking-[0.015em]">
@@ -65,13 +79,17 @@ export default function Section6Buy() {
 					<h2 className="text-center font-senior text-[60px] text-[#056242]">
 						How to buy?
 					</h2>
-					<div className="relative z-0 overflow-hidden pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
+					<div className="relative z-0 pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
 						<div className="mt-[100px] flex items-center gap-x-[44px]">
 							<img
+								ref={(instance) => {
+									instance && observer.observe(instance)
+								}}
 								src={pepeMining}
 								alt="Pepe is mining"
 								width={520}
 								height={520}
+								className="scale-0"
 							/>
 							<p className="">
 								Download <span className="text-[#ED2C31]">Qt wallet</span>
@@ -126,7 +144,16 @@ export default function Section6Buy() {
 						</div>
 						<div className="flex justify-between">
 							<div className="flex flex-col items-center">
-								<img src={pepeHappy} alt="" width={520} height={520} />
+								<img
+									ref={(instance) => {
+										instance && observer.observe(instance)
+									}}
+									src={pepeHappy}
+									alt=""
+									width={520}
+									height={520}
+									className="scale-0"
+								/>
 								<p className="mt-[24px] text-center">
 									If you mine,
 									<br />
@@ -134,7 +161,16 @@ export default function Section6Buy() {
 								</p>
 							</div>
 							<div className="flex flex-col items-center">
-								<img src={pepeCex} alt="" width={520} height={520} />
+								<img
+									ref={(instance) => {
+										instance && observer.observe(instance)
+									}}
+									src={pepeCex}
+									alt=""
+									width={520}
+									height={520}
+									className="scale-0"
+								/>
 								<p className="mt-[24px] text-center">
 									You can also buy
 									<br />
@@ -202,7 +238,16 @@ export default function Section6Buy() {
 							</div>
 						</div>
 						<div className="flex flex-col items-center">
-							<img src={pepeMoon} alt="" width={520} height={520} />
+							<img
+								ref={(instance) => {
+									instance && observer.observe(instance)
+								}}
+								src={pepeMoon}
+								alt=""
+								width={520}
+								height={520}
+								className="scale-0"
+							/>
 							<p className="mt-[24px] text-center">
 								HODL and
 								<br />

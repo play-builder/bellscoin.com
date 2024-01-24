@@ -46,6 +46,10 @@ export default {
 					'33%': { transform: 'translateY(-46px) rotate(2.53deg)' },
 					'66%': { transform: 'translateY(-14.5px) rotate(-2.15deg)' },
 				},
+				pop: {
+					from: { transform: 'scale(0)' },
+					to: { transform: 'scale(100%)' },
+				},
 				rattling: {
 					'0%': { transform: 'translateY(0) rotate(0)' },
 					'3%': { transform: 'translateY(-10px) rotate(2deg)' },
