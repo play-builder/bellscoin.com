@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 
 import bellBag from '~/assets/bell-bag.png'
+import bellCoin from '~/assets/bell-coin.png'
 import bellCoins from '~/assets/bell-coins.png'
 import ribbon from '~/assets/ribbon.svg'
+import starWand from '~/assets/star-wand.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { EmissionChart } from '~/section4.chart.tsx'
 
@@ -55,8 +57,8 @@ export default function Section4Tokenomics() {
 	}, [])
 
 	return (
-		<section className="bg-[#FCC22D] pb-[460px]">
-			<div className="relative overflow-hidden pb-[44px] pt-[36px]">
+		<section className="overflow-hidden bg-[#FCC22D] pb-[460px]">
+			<div className="relative pb-[44px] pt-[36px]">
 				<div className="relative -translate-y-[40px] *:absolute *:left-0 *:top-0 *:h-[220px] *:w-[calc((100%-700px)/2)]">
 					{/* TODO whole ribbon svg */}
 					<img
@@ -103,15 +105,41 @@ export default function Section4Tokenomics() {
 					/>
 				</div>
 				<div className="relative mx-auto flex h-[166px] w-[994px] flex-col items-center justify-center drop-shadow-bubble">
-					<div className="absolute z-[-1] h-full w-full bg-[#ED2C31] [clip-path:polygon(100%_0,95%_50%,100%_100%,0%_100%,5%_50%,0%_0%)]" />
-					<h2 className="-mt-[16px] font-mitr text-[60px] tracking-305 text-[#F4BE04] text-shadow">
+					<div className="absolute h-full w-full bg-[#ED2C31] [clip-path:polygon(100%_0,95%_50%,100%_100%,0%_100%,5%_50%,0%_0%)]" />
+					<div className="absolute h-full w-full">
+						<img
+							src={starWand}
+							alt="star wand"
+							className="absolute -top-[44px] left-[60px] w-[99px]"
+						/>
+						<div className="relative left-[108px] top-[12px] *:absolute">
+							<img src={bellCoin} alt="" className="left-[26px] w-[30px]" />
+							<img
+								src={bellCoin}
+								alt=""
+								className="left-[42px] top-[19px] w-[30px]"
+							/>
+							<img
+								src={bellCoin}
+								alt=""
+								className="left-[24px] top-[47px] w-[30px]"
+							/>
+							<img
+								src={bellCoin}
+								alt=""
+								className="left-[22px] top-[29px] w-[26px]"
+							/>
+							<img src={bellCoin} alt="" className="top-[51px] w-[23px]" />
+						</div>
+					</div>
+					<h2 className="relative -mt-[16px] font-mitr text-[60px] tracking-305 text-[#F4BE04] text-shadow">
 						TOKENOMICS
 					</h2>
 					<a
 						href="https://bitcointalk.org/index.php?topic=349695.0"
 						target="_blank"
 						rel="noreferrer"
-						className="mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04] focus:text-[#F4BE04]"
+						className="relative mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04] focus:text-[#F4BE04]"
 					>
 						ARCHIVE LINK
 					</a>
