@@ -11,12 +11,10 @@ import { EmissionChart } from '~/section4.chart.tsx'
 const observer = new IntersectionObserver(
 	(entries) => {
 		entries.forEach((entry) => {
-			if (entry.isIntersecting) {
-				observer.unobserve(entry.target)
-				entry.target.classList.add(
-					'animate-[pop_0.5s_cubic-bezier(0.575,0.000,0.500,1.520)_forwards]',
-				)
-			}
+			entry.target.classList.toggle(
+				'animate-[pop_0.5s_cubic-bezier(0.575,0.000,0.500,1.520)_forwards]',
+				entry.isIntersecting,
+			)
 		})
 	},
 	{ threshold: 0.5 },

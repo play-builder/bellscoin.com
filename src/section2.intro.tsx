@@ -98,7 +98,7 @@ export default function Section2Intro() {
 						Proof of work
 					</p>
 					<div className="relative -left-[80px] top-[40px] flex">
-						<div className="absolute left-[140px] top-[196px] animate-[jump-shaking_.5s_infinite]">
+						<div className="absolute left-[140px] top-[196px] animate-[jump-shaking_1s_infinite]">
 							<img
 								src={bellBag}
 								alt="bell bag"

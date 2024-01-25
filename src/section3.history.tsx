@@ -61,7 +61,7 @@ export default function Section3History() {
 							<div className="-mt-[8px] ml-[0] h-[42px] w-[42px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 							<div className="ml-[0] mt-[15px] h-[32px] w-[32px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
 							<div className="ml-[42px] mt-[12px] h-[22px] w-[22px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-							<div className="animate-[jump-shaking_.5s_infinite]">
+							<div className="animate-[jump-shaking_1s_infinite]">
 								<img
 									src={bellBag}
 									alt="bell bag"
