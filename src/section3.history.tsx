@@ -9,10 +9,10 @@ import speechBubble from '~/assets/speech-bubble.png'
 export default function Section3History() {
 	return (
 		<section>
-			<div className="relative bg-[#FFFBB4] pb-[258px] pt-[515px]">
+			<div className="relative bg-[#FFFBB4] pb-[20px] pt-[37px] lg:pb-[258px] lg:pt-[515px]">
 				<BackgroundLeaves />
-				<div className="mx-auto flex w-[1080px] flex-col">
-					<p className="ml-[455px] font-chelsea text-[34px] uppercase leading-[50px] tracking-305 text-[#F4BE04]">
+				<div className="mx-auto flex flex-col lg:w-[1080px]">
+					<p className="mx-auto w-[270px] font-chelsea text-[18px] uppercase leading-[22px] tracking-305 text-[#F4BE04] lg:ml-[455px] lg:w-auto lg:text-[34px] lg:leading-[50px]">
 						Bells ($Bel) was
 						<br />
 						developed by
@@ -21,32 +21,32 @@ export default function Section3History() {
 						<br />
 						8days before
 						<br />
-						<img
-							src={dogeCoin}
-							alt="DOGE"
-							width={88}
-							height={88}
-							className="inline"
-						/>
-						<span className="pl-[20px] align-bottom text-[#ED2C31]">
-							DOGE coin
+						<span className="inline-flex items-end">
+							<span className="text-[#ED2C31] lg:order-1 lg:pl-[20px]">
+								DOGE coin
+							</span>
+							<img
+								src={dogeCoin}
+								alt="DOGE"
+								width={45}
+								height={45}
+								className="inline lg:w-[88px]"
+							/>
 						</span>
 						<br />
-						was released in the
-						<br />
-						world
+						was released in the world
 					</p>
-					<div className="relative ml-[192px] mt-[40px]">
-						<div className="absolute -translate-x-[calc(100%-80px)] -translate-y-[calc(100%-67px)]">
-							<div className="relative ml-[22px]">
+					<div className="relative mx-auto mt-[100px] translate-x-[52px] lg:ml-[192px] lg:mt-[40px]">
+						<div className="absolute -translate-x-[120px] -translate-y-[80px] lg:-translate-x-[calc(100%-80px)] lg:-translate-y-[calc(100%-67px)]">
+							<div className="relative lg:ml-[22px]">
 								<img
 									src={speechBubble}
 									alt="speech bubble"
-									width={253}
-									height={169}
-									className="h-[169px]"
+									width={127}
+									height={83}
+									className="lg:w-[253px]"
 								/>
-								<span className="absolute top-[27px] w-full text-center font-mogra text-[24px] uppercase leading-[26px] tracking-305">
+								<span className="absolute top-[10px] w-full text-center font-mogra text-[12px] uppercase leading-[12px] tracking-305 lg:top-[16px] lg:text-[24px] lg:leading-[26px]">
 									I came into
 									<br />
 									the world
@@ -58,44 +58,45 @@ export default function Section3History() {
 									did!
 								</span>
 							</div>
-							<div className="-mt-[8px] ml-[0] h-[42px] w-[42px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-							<div className="ml-[0] mt-[15px] h-[32px] w-[32px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-							<div className="ml-[42px] mt-[12px] h-[22px] w-[22px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+							<div className="ml-[17px] mt-[4px] h-[17px] w-[17px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:-mt-[8px] lg:ml-0 lg:h-[42px] lg:w-[42px]" />
+							<div className="ml-[14px] mt-[4px] h-[13px] w-[13px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-0 lg:mt-[15px] lg:h-[32px] lg:w-[32px]" />
+							<div className="ml-[21px] mt-[4px] h-[9px] w-[9px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-[42px] lg:mt-[12px] lg:h-[22px] lg:w-[22px]" />
 							<div className="animate-[jump-shaking_1s_infinite]">
 								<img
 									src={bellBag}
 									alt="bell bag"
-									width={191}
-									height={238}
-									className="-mt-[10px] ml-[42px] -scale-x-100"
+									width={76}
+									height={95}
+									className="ml-[25px] -scale-x-100 lg:-mt-[10px] lg:ml-[42px] lg:w-[191px]"
 								/>
 							</div>
 						</div>
-						<div className="flex">
+						<div className="mt-[40px] flex flex-shrink-0 animate-[jump-shaking-2_.5s_linear_infinite] lg:ml-[22px] lg:mt-[5px]">
 							<img
 								src={dogeTesla}
 								alt="doge on tesla"
-								width={400}
-								height={400}
-								className="animate-[jump-shaking-2_.5s_linear_infinite]"
+								width={180}
+								height={180}
+								className="lg:w-[400px]"
 							/>
-							<div className="ml-[22px] mt-[5px] flex-shrink-0">
-								<div className="relative ml-[112px]">
+							<div className="absolute -translate-y-[100px] translate-x-[100px] lg:translate-x-[420px] lg:translate-y-[20px]">
+								<div className="relative lg:ml-[112px]">
 									<img
 										src={speechBubble}
 										alt="speech bubble"
-										width={195}
-										height={124}
+										width={69}
+										height={44}
+										className="lg:w-[195px]"
 									/>
-									<span className="absolute top-[15px] w-full pl-[10px] text-center font-mogra text-[36px] leading-[1.2] tracking-305">
+									<span className="absolute top-[8px] w-full text-center font-mogra text-[12px] leading-[12px] tracking-305 lg:top-[15px] lg:pl-[10px] lg:text-[36px] lg:leading-[1.2]">
 										SO,,
 										<br />
 										WHAT?
 									</span>
 								</div>
-								<div className="ml-[78px] h-[36px] w-[36px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-								<div className="ml-[36px] mt-[4px] h-[28px] w-[28px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
-								<div className="-mt-[4px] h-[18px] w-[18px] rounded-full bg-[#F8D703] drop-shadow-bubble" />
+								<div className="ml-[23px] mt-[4px] h-[16px] w-[16px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-[78px] lg:mt-0 lg:h-[36px] lg:w-[36px]" />
+								<div className="ml-[16px] mt-[7px] h-[11px] w-[11px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-[36px] lg:mt-[4px] lg:h-[28px] lg:w-[28px]" />
+								<div className="mt-[8px] h-[10px] w-[10px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:-mt-[4px] lg:h-[18px] lg:w-[18px]" />
 							</div>
 						</div>
 					</div>
@@ -140,7 +141,8 @@ function BackgroundLeaves() {
 							key={i}
 							src={leaf}
 							alt="leaf"
-							width={120}
+							width={30}
+							className="lg:w-[120px]"
 							style={{
 								marginLeft: `${x}px`,
 								marginTop: `${y}px`,
