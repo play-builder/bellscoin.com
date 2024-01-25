@@ -14,6 +14,7 @@ import trail1 from '~/assets/trail-1.svg'
 import trail2 from '~/assets/trail-2.svg'
 import xeggex from '~/assets/xeggex.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
+import { typewriter } from '~/util/typewriter.ts'
 
 import {
 	CoinGecko,
@@ -24,19 +25,53 @@ import {
 	Twitter,
 } from './component/ContactIcon.tsx'
 
-const observer = new IntersectionObserver(
+const pepeObserver = new IntersectionObserver(
 	(entries) => {
 		entries.forEach((entry) => {
 			if (entry.isIntersecting) {
-				entry.target.classList.toggle(
+				pepeObserver.unobserve(entry.target)
+				entry.target.classList.add(
 					'animate-[pop_0.5s_cubic-bezier(0.575,0.000,0.500,1.520)_forwards]',
-					true,
 				)
 			}
 		})
 	},
 	{ threshold: 0.5 },
 )
+
+const typingObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			typingObserver.unobserve(entry.target)
+			entry.target.innerHTML = ''
+			void typewriter(
+				[
+					'AND WE NEED MORE..',
+					null,
+					'CONTACT TO ',
+					{
+						tagName: 'a',
+						text: 'DISCORD',
+						href: 'https://t.co/4DCHZEdSSE',
+						target: '_blank',
+						className: 'hover:text-white focus:text-white',
+						rel: 'noreferrer',
+					},
+					null,
+					'IF YOU LIKE ',
+					{
+						tagName: 'span',
+						text: '$BELLS',
+						className: 'text-[#ED2C31]',
+					},
+				],
+				entry.target as HTMLElement,
+				100,
+				200,
+			)
+		}
+	})
+})
 
 export default function Section6Buy() {
 	return (
@@ -83,7 +118,7 @@ export default function Section6Buy() {
 						<div className="mt-[100px] flex items-center gap-x-[44px]">
 							<img
 								ref={(instance) => {
-									instance && observer.observe(instance)
+									instance && pepeObserver.observe(instance)
 								}}
 								src={pepeMining}
 								alt="Pepe is mining"
@@ -146,7 +181,7 @@ export default function Section6Buy() {
 							<div className="flex flex-col items-center">
 								<img
 									ref={(instance) => {
-										instance && observer.observe(instance)
+										instance && pepeObserver.observe(instance)
 									}}
 									src={pepeHappy}
 									alt=""
@@ -163,7 +198,7 @@ export default function Section6Buy() {
 							<div className="flex flex-col items-center">
 								<img
 									ref={(instance) => {
-										instance && observer.observe(instance)
+										instance && pepeObserver.observe(instance)
 									}}
 									src={pepeCex}
 									alt=""
@@ -240,7 +275,7 @@ export default function Section6Buy() {
 						<div className="flex flex-col items-center">
 							<img
 								ref={(instance) => {
-									instance && observer.observe(instance)
+									instance && pepeObserver.observe(instance)
 								}}
 								src={pepeMoon}
 								alt=""
@@ -288,21 +323,29 @@ export default function Section6Buy() {
 						<img src={coinex} alt="CoinEx" width={189} />
 					</a>
 				</div>
-				<p className="mt-[66px] font-senior text-[24px] leading-[1.5]">
-					AND WE NEED MORE..
-					<br />
-					CONTACT TO{' '}
-					<a
-						href="https://t.co/4DCHZEdSSE"
-						target="_blank"
-						rel="noreferrer"
-						className="hover:text-white focus:text-white"
-					>
-						DISCORD
-					</a>
-					<br />
-					IF YOU LIKE <span className="text-[#ED2C31]">$BELLS</span>
-				</p>
+				<div className="relative mt-[66px] flex justify-center font-senior text-[24px] leading-[1.5]">
+					<p
+						ref={(instance) => {
+							instance && typingObserver.observe(instance)
+						}}
+						className="absolute"
+					/>
+					<p className="invisible">
+						AND WE NEED MORE..
+						<br />
+						CONTACT TO{' '}
+						<a
+							href="https://t.co/4DCHZEdSSE"
+							target="_blank"
+							rel="noreferrer"
+							className="hover:text-white focus:text-white"
+						>
+							DISCORD
+						</a>
+						<br />
+						IF YOU LIKE <span className="text-[#ED2C31]">$BELLS</span>
+					</p>
+				</div>
 			</div>
 			<div className="mx-auto mt-[166px] grid w-[1080px] grid-cols-[108px_1fr] items-center gap-x-[4px] text-[#505050] *:font-senior *:tracking-[0.015em] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[34px]">
 				<img src={bellsGenesis31} alt="" width={90} height={90} />

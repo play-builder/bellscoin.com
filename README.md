@@ -6,6 +6,7 @@
 - detailed chart tooltip
 - image optimization
 - cleanup unused animations
+- extract common intersection observers
 
 # React + TypeScript + Vite
 

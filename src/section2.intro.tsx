@@ -2,6 +2,45 @@ import bellBag from '~/assets/bell-bag.png'
 import mainBackground from '~/assets/main-background.svg'
 import speechBubble from '~/assets/speech-bubble.png'
 import welcomeBoard from '~/assets/welcome-board.png'
+import { typewriter } from '~/util/typewriter.ts'
+
+const typingObserver = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			typingObserver.unobserve(entry.target)
+			entry.target.innerHTML = ''
+			void typewriter(
+				[
+					'was created by @BillyM2k,',
+					null,
+					'the creator of Doge Coin.',
+					null,
+					null,
+					'Bells was motivated by animal crossing, the most popular ',
+					{
+						className: 'text-[#F73602]',
+						tagName: 'span',
+						text: 'Nintendo',
+					},
+					' game.',
+					null,
+					null,
+					'Bells coin is the original meme coin born in 2013,',
+					null,
+					'but was revived in 2023.',
+					null,
+					null,
+					'Before Doge emerged,',
+					null,
+					'BELLS had already existed.',
+				],
+				entry.target as HTMLElement,
+				40,
+				200,
+			)
+		}
+	})
+})
 
 export default function Section2Intro() {
 	return (
@@ -21,25 +60,33 @@ export default function Section2Intro() {
 				<h1 className="-ml-[4px] text-[56px] leading-[1.8] tracking-305 text-white">
 					Bells ($Bel) coin
 				</h1>
-				<p className="pr-[80px] text-[30px] leading-[1.2] tracking-305 text-white">
-					was created by @BillyM2k,
-					<br />
-					the creator of Doge Coin.
-					<br />
-					<br />
-					BElls was motivated by animal crossing, the most popular{' '}
-					<span className="text-[30px] text-[#F73602]">Nintendo</span> game.
-					<br />
-					<br />
-					Bells coin is the original meme coin born in 2013,
-					<br />
-					but was revived in 2023.
-					<br />
-					<br />
-					Before Doge emerged,
-					<br />
-					BELLS had already existed.
-				</p>
+				<div className="relative pr-[80px] text-[30px] leading-[1.2] tracking-305 text-white">
+					<p
+						ref={(instance) => {
+							instance && typingObserver.observe(instance)
+						}}
+						className="absolute"
+					/>
+					<p className="invisible">
+						was created by @BillyM2k,
+						<br />
+						the creator of Doge Coin.
+						<br />
+						<br />
+						Bells was motivated by animal crossing, the most popular{' '}
+						<span className="text-[#F73602]">Nintendo</span> game.
+						<br />
+						<br />
+						Bells coin is the original meme coin born in 2013,
+						<br />
+						but was revived in 2023.
+						<br />
+						<br />
+						Before Doge emerged,
+						<br />
+						BELLS had already existed.
+					</p>
+				</div>
 				<div className="mx-auto flex w-[1080px]">
 					<p className="-ml-[60px] mt-[310px] inline-block w-[748px] flex-shrink-0 text-center text-[36px] leading-[1.2] tracking-305">
 						Original Meme coin
