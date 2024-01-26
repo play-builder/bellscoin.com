@@ -7,6 +7,7 @@ import ribbon from '~/assets/ribbon.svg'
 import starWand from '~/assets/star-wand.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { EmissionChart } from '~/section4.chart.tsx'
+import { useViewportSize } from '~/util/use-viewport-size.ts'
 
 const observer = new IntersectionObserver(
 	(entries) => {
@@ -68,10 +69,13 @@ export default function Section4Tokenomics() {
 			})
 	}, [])
 
+	const viewportSize = useViewportSize()
+	const isMobile = viewportSize === 'sm'
+
 	return (
-		<section className="overflow-hidden bg-[#FCC22D] pb-[460px]">
-			<div className="relative pb-[44px] pt-[36px]">
-				<div className="relative -translate-y-[40px] *:absolute *:left-0 *:top-0 *:h-[220px] *:w-[calc((100%-700px)/2)]">
+		<section className="overflow-hidden bg-[#FCC22D] pb-[40px] lg:pb-[460px]">
+			<div className="relative pt-[9px] lg:pt-[36px]">
+				<div className="invisible relative -translate-y-[40px] *:absolute *:left-0 *:top-0 *:h-[220px] *:w-[calc((100%-700px)/2)] lg:visible">
 					{/* TODO whole ribbon svg */}
 					<img
 						src={ribbon}
@@ -94,7 +98,7 @@ export default function Section4Tokenomics() {
 						className="-translate-x-[20px] -translate-y-[48px]"
 					/>
 				</div>
-				<div className="relative -translate-y-[40px] -scale-x-100 *:absolute *:left-0 *:top-0 *:h-[220px] *:w-[calc((100%-700px)/2)]">
+				<div className="invisible relative -translate-y-[40px] -scale-x-100 *:absolute *:left-0 *:top-0 *:h-[220px] *:w-[calc((100%-700px)/2)] lg:visible">
 					<img
 						src={ribbon}
 						alt=""
@@ -116,15 +120,15 @@ export default function Section4Tokenomics() {
 						className="-translate-x-[20px] -translate-y-[48px]"
 					/>
 				</div>
-				<div className="relative mx-auto flex h-[166px] w-[994px] flex-col items-center justify-center drop-shadow-bubble">
+				<div className="relative mx-auto flex h-[59px] w-[350px] flex-col items-center justify-center drop-shadow-bubble lg:h-[166px] lg:w-[994px]">
 					<div className="absolute h-full w-full bg-[#ED2C31] [clip-path:polygon(100%_0,95%_50%,100%_100%,0%_100%,5%_50%,0%_0%)]" />
 					<div className="absolute h-full w-full">
 						<img
 							src={starWand}
 							alt="star wand"
-							className="absolute -top-[44px] left-[60px] w-[99px]"
+							className="absolute -top-[8px] left-[4px] w-[36px] lg:-top-[44px] lg:left-[60px] lg:w-[99px]"
 						/>
-						<div className="relative left-[108px] top-[12px] *:absolute">
+						<div className="relative left-[16px] top-[16px] origin-left scale-[40%] *:absolute lg:left-[108px] lg:top-[12px] lg:scale-100">
 							<img src={bellCoin} alt="" className="left-[26px] w-[30px]" />
 							<img
 								src={bellCoin}
@@ -144,19 +148,19 @@ export default function Section4Tokenomics() {
 							<img src={bellCoin} alt="" className="top-[51px] w-[23px]" />
 						</div>
 					</div>
-					<h2 className="relative -mt-[16px] font-mitr text-[60px] tracking-305 text-[#F4BE04] text-shadow">
+					<h2 className="relative -mt-[28px] font-mitr text-[22px] tracking-305 text-[#F4BE04] text-shadow lg:-mt-[16px] lg:text-[60px]">
 						TOKENOMICS
 					</h2>
 					<a
 						href="https://bitcointalk.org/index.php?topic=349695.0"
 						target="_blank"
 						rel="noreferrer"
-						className="relative mb-[-25px] font-mogra text-[24px] tracking-305 text-white hover:text-[#F4BE04] focus:text-[#F4BE04]"
+						className="relative -mt-[4px] mb-[-25px] font-mogra text-[12px] tracking-305 text-white hover:text-[#F4BE04] focus:text-[#F4BE04] lg:mt-0 lg:text-[24px]"
 					>
 						ARCHIVE LINK
 					</a>
 				</div>
-				<div className="mt-[100px] flex justify-center gap-x-[15px] font-mogra text-[22px] uppercase leading-[1.2] tracking-305 *:h-[300px] *:w-[520px] *:rounded-[15px] *:bg-white *:px-[28px] *:py-[20px]">
+				<div className="mt-[13px] flex flex-col items-center justify-center gap-y-[11px] font-mogra text-[14px] uppercase leading-[1.2] tracking-305 *:w-[320px] *:gap-y-[15px] *:rounded-[15px] *:bg-white *:p-[13px] lg:mt-[100px] lg:flex-row lg:gap-x-[15px] lg:text-[22px] lg:*:h-[300px] lg:*:w-[520px] lg:*:px-[28px] lg:*:py-[20px]">
 					<div className="grid grid-cols-[1.5fr_1fr] items-center drop-shadow-bubble odd:*:text-[#404040] even:*:text-[#ED2C31]">
 						<span>Max supply</span>
 						<span>Unlimited</span>
@@ -210,17 +214,17 @@ export default function Section4Tokenomics() {
 						</span>
 					</div>
 				</div>
-				<div className="mt-[176px] grid grid-cols-[1fr_170px_1fr] [&>*:nth-child(3n+1)]:justify-self-end">
-					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
+				<div className="mt-[100px] grid grid-cols-[260px] grid-rows-[repeat(3,250px_100px)_250px] justify-center *:w-full lg:mt-[176px] lg:grid-cols-[380px_170px_380px] lg:grid-rows-[360px_170px_360px] lg:[&>*:nth-child(3n+1)]:justify-self-end">
+					<div className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]">
 						<img
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
 							src={bellBag}
 							alt=""
-							width={153}
-							height={182}
-							className="absolute -left-[70px] -top-[94px] scale-0"
+							width={80}
+							height={95}
+							className="absolute -top-[72px] left-[69px] scale-0 lg:-left-[70px] lg:-top-[94px] lg:w-[153px]"
 						/>
 						<img
 							ref={(instance) => {
@@ -228,23 +232,23 @@ export default function Section4Tokenomics() {
 							}}
 							src={bellBag}
 							alt=""
-							width={153}
-							height={182}
-							className="absolute -top-[94px] left-[8px] scale-0"
+							width={80}
+							height={95}
+							className="absolute -top-[72px] left-[109px] scale-0 lg:-top-[94px] lg:left-[8px] lg:w-[153px]"
 						/>
-						<h4 className="px-[36px] text-right text-[34px] tracking-305">
+						<h4 className="px-[36px] text-center text-[22px] tracking-305 lg:text-right lg:text-[34px]">
 							EPOCH
 							<span className="text-[#08835E]">2</span>
 						</h4>
-						<span className="mt-[-8px] block px-[36px] text-right text-[18px] tracking-305">
+						<span className="mt-[-4px] block px-[36px] text-center text-[12px] tracking-305 lg:-mt-[8px] lg:text-right lg:text-[18px]">
 							(~1st 90days)
 						</span>
-						<h5 className="mt-[16px] text-center text-[24px] leading-[26px] tracking-305 text-[#6A4E41]">
+						<h5 className="mt-[10px] text-center text-[14px] leading-[14px] tracking-305 text-[#6A4E41] lg:mt-[16px] lg:text-[24px] lg:leading-[26px]">
 							Block
 							<br />
 							101 - 129,600
 						</h5>
-						<div className="mt-[20px] grid grid-cols-3 gap-y-[6px] px-[40px] text-[20px] tracking-305 [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[4px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
+						<div className="mt-[16px] grid grid-cols-3 gap-y-[6px] px-[40px] text-[12px] tracking-305 lg:mt-[20px] lg:text-[20px] [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[4px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
 							<span>1%</span>
 							<span>10,000</span>
 							<span>$BEL</span>
@@ -269,35 +273,35 @@ export default function Section4Tokenomics() {
 						<SequenceArrows
 							colorOff="white"
 							colorOn="#ED2C31"
-							direction="right"
+							direction={isMobile ? 'down' : 'right'}
 							size={26}
 							number={5}
 						/>
 					</div>
-					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
+					<div className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]">
 						<img
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
 							src={bellBag}
 							alt=""
-							width={150}
-							height={180}
-							className="absolute -left-[53px] -top-[91px] scale-0"
+							width={80}
+							height={95}
+							className="absolute -top-[62px] left-[90px] scale-0 lg:-left-[53px] lg:-top-[91px] lg:w-[150px]"
 						/>
-						<h4 className="px-[36px] text-right text-[34px] tracking-305">
+						<h4 className="px-[36px] text-center text-[22px] tracking-305 lg:text-right lg:text-[34px]">
 							EPOCH
 							<span className="text-[#08835E]">3</span>
 						</h4>
-						<span className="mt-[-8px] block px-[36px] text-right text-[18px] tracking-305">
+						<span className="mt-[-4px] block px-[36px] text-center text-[12px] tracking-305 lg:-mt-[8px] lg:text-right lg:text-[18px]">
 							(~2nd 90days)
 						</span>
-						<h5 className="mt-[16px] text-center text-[24px] leading-[26px] tracking-305 text-[#6A4E41]">
+						<h5 className="mt-[10px] text-center text-[14px] leading-[14px] tracking-305 text-[#6A4E41] lg:mt-[16px] lg:text-[24px] lg:leading-[26px]">
 							Block
 							<br />
 							129,601 - 259,200
 						</h5>
-						<div className="mt-[20px] grid grid-cols-3 gap-y-[6px] px-[40px] text-[20px] tracking-305 [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[12px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
+						<div className="mt-[16px] grid grid-cols-3 gap-y-[6px] px-[40px] text-[12px] tracking-305 lg:mt-[20px] lg:text-[20px] [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[12px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
 							<span>1%</span>
 							<span>5,000</span>
 							<span>$BEL</span>
@@ -318,9 +322,12 @@ export default function Section4Tokenomics() {
 							<span>$BEL</span>
 						</div>
 					</div>
-					<div></div>
-					<div></div>
-					<div className="flex h-[170px] w-[522px] flex-col items-center justify-evenly py-[4px]">
+					<div
+						className="flex flex-col items-center justify-evenly py-[4px]"
+						style={{
+							gridArea: isMobile ? 'initial' : '2 / 3 / 3 / 4',
+						}}
+					>
 						<SequenceArrows
 							colorOff="white"
 							colorOn="#ED2C31"
@@ -330,73 +337,35 @@ export default function Section4Tokenomics() {
 							number={5}
 						/>
 					</div>
-					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
-						<img
-							ref={(instance) => {
-								instance && observer.observe(instance)
-							}}
-							src={bellCoins}
-							alt=""
-							width={156}
-							height={113}
-							className="absolute -left-[40px] -top-[36px] scale-0"
-						/>
-						<h4 className="px-[36px] text-right text-[34px] tracking-305">
-							EPOCH
-							<span className="text-[#08835E]">5</span>
-						</h4>
-						<span className="mt-[-8px] block px-[36px] text-right text-[18px] tracking-305">
-							&nbsp;
-						</span>
-						<h5 className="mt-[16px] text-center text-[24px] leading-[26px] tracking-305 text-[#6A4E41]">
-							After
-							<br />
-							Block 518,400
-						</h5>
-						<p className="mt-[44px] text-center text-[24px] tracking-305 text-[#ED2C31]">
-							2&nbsp;&nbsp;<span className="text-[#F4BE04]">$Bel</span>
-							<br />
-							Per 1 Block
-						</p>
-						<p className="mt-[24px] text-center text-[20px] tracking-305 text-[#6A4E41]">
-							daily
-							<br />
-							2,880 Bells
-						</p>
-					</div>
-					<div className="flex items-center justify-evenly px-[4px]">
-						<SequenceArrows
-							colorOff="white"
-							colorOn="#ED2C31"
-							direction="left"
-							size={26}
-							number={5}
-						/>
-					</div>
-					<div className="relative h-[360px] w-[380px] rounded-[69px] bg-white py-[20px] font-mogra uppercase leading-[1.2] drop-shadow-bubble">
+					<div
+						className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]"
+						style={{
+							gridArea: isMobile ? 'initial' : '3 / 3 / 4 / 4',
+						}}
+					>
 						<img
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
 							src={bellBag}
 							alt=""
-							width={105}
-							height={126}
-							className="absolute -left-[29px] -top-[43px] scale-0"
+							width={45}
+							height={53}
+							className="absolute -top-[26px] left-[108px] scale-0 lg:-left-[29px] lg:-top-[43px] lg:w-[105px]"
 						/>
-						<h4 className="px-[36px] text-right text-[34px] tracking-305">
+						<h4 className="px-[36px] text-center text-[22px] tracking-305 lg:text-right lg:text-[34px]">
 							EPOCH
 							<span className="text-[#08835E]">4</span>
 						</h4>
-						<span className="mt-[-8px] block px-[36px] text-right text-[18px] tracking-305">
+						<span className="mt-[-4px] block px-[36px] text-center text-[12px] tracking-305 lg:-mt-[8px] lg:text-right lg:text-[18px]">
 							(~next 180days)
 						</span>
-						<h5 className="mt-[16px] text-center text-[24px] leading-[26px] tracking-305 text-[#6A4E41]">
+						<h5 className="mt-[10px] text-center text-[14px] leading-[14px] tracking-305 text-[#6A4E41] lg:mt-[16px] lg:text-[24px] lg:leading-[26px]">
 							Block
 							<br />
 							259,001 - 518,400
 						</h5>
-						<div className="mt-[20px] grid grid-cols-3 gap-y-[12px] px-[40px] text-[20px] tracking-305 [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[16px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
+						<div className="mt-[16px] grid grid-cols-3 gap-y-[10px] px-[40px] text-[12px] tracking-305 lg:mt-[20px] lg:gap-y-[12px] lg:text-[20px] [&>*:nth-child(3n)]:justify-self-end [&>*:nth-child(3n)]:text-[#F4BE04] [&>*:nth-child(3n+2)]:pl-[16px] [&>*:nth-child(3n+2)]:text-[#ED2C31]">
 							<span>1%</span>
 							<span>500</span>
 							<span>$BEL</span>
@@ -414,8 +383,63 @@ export default function Section4Tokenomics() {
 							<span>$BEL</span>
 						</div>
 					</div>
+					<div
+						className="flex items-center justify-evenly px-[4px]"
+						style={{
+							gridArea: isMobile ? 'initial' : '3 / 2 / 4 / 3',
+						}}
+					>
+						<SequenceArrows
+							colorOff="white"
+							colorOn="#ED2C31"
+							direction={isMobile ? 'down' : 'left'}
+							size={26}
+							number={5}
+						/>
+					</div>
+					<div
+						className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]"
+						style={{
+							gridArea: isMobile ? 'initial' : '3 / 1 / 4 / 2',
+						}}
+					>
+						<img
+							ref={(instance) => {
+								instance && observer.observe(instance)
+							}}
+							src={bellCoins}
+							alt=""
+							width={62}
+							height={48}
+							className="absolute -top-[24px] left-[99px] scale-0 lg:-left-[40px] lg:-top-[36px] lg:w-[156px]"
+						/>
+						<h4 className="px-[36px] text-center text-[22px] tracking-305 lg:text-right lg:text-[34px]">
+							EPOCH
+							<span className="text-[#08835E]">5</span>
+						</h4>
+						<span className="mt-[-4px] block px-[36px] text-center text-[12px] tracking-305 lg:-mt-[8px] lg:text-right lg:text-[18px]">
+							&nbsp;
+						</span>
+						<h5 className="mt-[16px] text-center text-[14px] leading-[14px] tracking-305 text-[#6A4E41] lg:mt-[16px] lg:text-[24px] lg:leading-[26px]">
+							After
+							<br />
+							Block 518,400
+						</h5>
+						<p className="mt-[24px] text-center text-[14px] tracking-305 text-[#ED2C31] lg:mt-[44px] lg:text-[24px]">
+							2&nbsp;&nbsp;<span className="text-[#F4BE04]">$Bel</span>
+							<br />
+							Per 1 Block
+						</p>
+						<p className="mt-[24px] text-center text-[14px] tracking-305 text-[#6A4E41] lg:text-[20px]">
+							daily
+							<br />
+							2,880 Bells
+						</p>
+					</div>
 				</div>
-				<h3 className="mt-[308px] text-center font-chelsea text-[64px] leading-[74px] text-[#834B16]">
+			</div>
+			<div className="mt-[98px] hidden lg:mt-[308px] lg:block">
+				<h3 className="mx-auto w-min text-center font-chelsea text-[24px] leading-[1.2] text-[#834B16] lg:w-auto lg:text-[64px] lg:leading-[74px]">
 					Bellscoin emissions
 				</h3>
 				<EmissionChart />

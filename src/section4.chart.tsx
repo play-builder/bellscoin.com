@@ -69,7 +69,7 @@ Chart.register(
 
 export function EmissionChart() {
 	return (
-		<div className="relative mx-auto w-[1280px]">
+		<div className="relative mx-auto mt-[18px] w-[calc(34000%/390)] lg:mt-[140px] lg:w-[1280px]">
 			<div className="absolute right-[12px] top-[20px] h-[532px] w-[714px] bg-gradient-to-r from-[rgba(43,105,97,0.2)] to-[rgba(24,255,175,0)]">
 				<div className="absolute top-[calc(50%-2px)] h-[1px] w-full bg-[#08835E]" />
 				<div className="absolute -right-[2px] top-[calc(50%-5px)] h-[7px] w-[7px] bg-[#08835E] [clip-path:polygon(86.6%_50%,0_0,0_100%)]"></div>
@@ -102,9 +102,8 @@ export function EmissionChart() {
 				EPOCH5
 			</span>
 			<Line
-				className="relative mx-auto mt-[140px] w-full"
+				className="relative mx-auto w-full"
 				options={{
-					// maintainAspectRatio: false,
 					elements: {
 						point: {
 							radius: 1,
@@ -113,6 +112,7 @@ export function EmissionChart() {
 							tension: 0.1,
 						},
 					},
+					maintainAspectRatio: false,
 					plugins: {
 						annotation: {
 							annotations: {
@@ -154,6 +154,7 @@ export function EmissionChart() {
 							},
 						},
 					},
+					responsive: true,
 					scales: {
 						x: {
 							border: {

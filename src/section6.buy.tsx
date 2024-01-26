@@ -15,6 +15,7 @@ import trail2 from '~/assets/trail-2.svg'
 import xeggex from '~/assets/xeggex.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { typewriter } from '~/util/typewriter.ts'
+import { useViewportSize } from '~/util/use-viewport-size.ts'
 
 import {
 	CoinGecko,
@@ -72,12 +73,14 @@ const typingObserver = new IntersectionObserver((entries) => {
 })
 
 export default function Section6Buy() {
+	const isMobile = useViewportSize() === 'sm'
+
 	return (
-		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[100px] *:tracking-[0.015em]">
-			<div className="relative overflow-hidden pt-[260px]">
+		<section className="bg-gradient-to-b from-[#C7FFEE] to-[#F4BE04] pb-[50px] *:tracking-[0.015em] lg:pb-[100px]">
+			<div className="relative overflow-hidden pb-[50px] pt-[48px] lg:pb-[100px] lg:pt-[260px]">
 				<BackgroundMeteor />
-				<div className="relative mx-auto w-[1080px]">
-					<div className="absolute -left-[28px] -top-[124px]">
+				<div className="relative mx-auto w-[360px] lg:w-[1080px]">
+					<div className="absolute -left-[28px] -top-[124px] hidden lg:block">
 						<img
 							src={bellBag}
 							alt=""
@@ -93,7 +96,7 @@ export default function Section6Buy() {
 							className="-translate-y-[96px] translate-x-[36px] -rotate-[15deg]"
 						/>
 					</div>
-					<div className="absolute right-[52px] top-[92px]">
+					<div className="absolute right-[52px] top-[92px] hidden lg:block">
 						<img
 							src={bellBag}
 							alt=""
@@ -109,22 +112,22 @@ export default function Section6Buy() {
 							className="-translate-y-[176px] translate-x-[54px] rotate-[15deg]"
 						/>
 					</div>
-					<h2 className="text-center font-senior text-[60px] text-[#056242]">
+					<h2 className="text-center font-senior text-[26px] text-[#056242] lg:text-[60px]">
 						How to buy?
 					</h2>
-					<div className="relative z-0 pb-[100px] font-senior text-[24px] leading-[1.33] text-[#691823]">
-						<div className="mt-[100px] flex items-center gap-x-[44px]">
+					<div className="relative z-0 mt-[24px] font-senior text-[12px] text-[#691823] lg:mt-[100px] lg:text-[24px] lg:leading-[1.33]">
+						<div className="flex items-center gap-x-[12px] lg:gap-x-[44px]">
 							<img
 								ref={(instance) => {
 									instance && pepeObserver.observe(instance)
 								}}
 								src={pepeMining}
 								alt="Pepe is mining"
-								width={520}
-								height={520}
-								className="scale-0"
+								width={200}
+								height={200}
+								className="scale-0 lg:w-[520px]"
 							/>
-							<p className="">
+							<p className="overflow-hidden break-words">
 								Download <span className="text-[#ED2C31]">Qt wallet</span>
 								<br />
 								and mine <span className="text-[#ED2C31]">$Bel</span> by
@@ -144,7 +147,27 @@ export default function Section6Buy() {
 								</a>
 							</p>
 						</div>
-						<div className="relative h-[312px]">
+						<div className="relative flex h-[100px] justify-center lg:hidden">
+							<div className="flex h-full w-[120px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#ED2C31"
+									direction="down"
+									number={5}
+									size={20}
+								/>
+							</div>
+							<div className="flex h-full w-[120px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="down"
+									number={5}
+									size={20}
+								/>
+							</div>
+						</div>
+						<div className="relative hidden h-[312px] lg:block">
 							<div className="flex h-full w-[520px] justify-center">
 								<SequenceArrows
 									colorOff="white"
@@ -183,11 +206,11 @@ export default function Section6Buy() {
 									}}
 									src={pepeHappy}
 									alt=""
-									width={520}
-									height={520}
-									className="scale-0"
+									width={150}
+									height={150}
+									className="scale-0 lg:w-[520px]"
 								/>
-								<p className="mt-[24px] text-center">
+								<p className="mt-[6px] text-center lg:mt-[24px]">
 									If you mine,
 									<br />
 									you will be happy
@@ -200,18 +223,38 @@ export default function Section6Buy() {
 									}}
 									src={pepeCex}
 									alt=""
-									width={520}
-									height={520}
-									className="scale-0"
+									width={150}
+									height={150}
+									className="scale-0 lg:w-[520px]"
 								/>
-								<p className="mt-[24px] text-center">
+								<p className="mt-[6px] text-center lg:mt-[24px]">
 									You can also buy
 									<br />
 									some <span className="text-[#ED2C31]">$Bel</span> on CEX
 								</p>
 							</div>
 						</div>
-						<div className="relative h-[312px]">
+						<div className="relative flex h-[100px] justify-center lg:hidden">
+							<div className="flex h-full w-[120px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#ED2C31"
+									direction="down"
+									number={5}
+									size={20}
+								/>
+							</div>
+							<div className="flex h-full w-[120px] justify-center">
+								<SequenceArrows
+									colorOff="white"
+									colorOn="#08835E"
+									direction="down"
+									number={5}
+									size={20}
+								/>
+							</div>
+						</div>
+						<div className="relative hidden h-[312px] lg:block">
 							<div className="flex h-1/2 w-[520px] justify-center">
 								<SequenceArrows
 									colorOff="white"
@@ -277,14 +320,16 @@ export default function Section6Buy() {
 								}}
 								src={pepeMoon}
 								alt=""
-								width={520}
-								height={520}
-								className="scale-0"
+								width={200}
+								height={200}
+								className="scale-0 lg:w-[520px]"
 							/>
-							<p className="mt-[24px] text-center">
+							<p className="mt-[6px] text-center lg:mt-[24px]">
 								HODL and
 								<br />
-								Go to the moon
+								Go to the moon!
+								<br />
+								LFG!
 							</p>
 						</div>
 					</div>
@@ -292,17 +337,25 @@ export default function Section6Buy() {
 			</div>
 			<div
 				id="exchanges"
-				className="pt-[50px] text-center *:tracking-[0.015em]"
+				className="pt-[32px] text-center *:tracking-[0.015em] lg:pt-[50px]"
 			>
-				<h3 className="font-chelsea text-[60px]">Listing exchanges</h3>
-				<div className="mt-[48px] flex items-center justify-center gap-x-[80px]">
+				<h3 className="font-chelsea text-[30px] lg:text-[60px]">
+					Listing exchanges
+				</h3>
+				<div className="mt-[32px] flex items-center justify-center gap-x-[32px] lg:mt-[48px] lg:gap-x-[80px]">
 					<a
 						href="https://nonkyc.io/market/BEL_USDT"
 						target="_blank"
 						rel="noreferrer"
 						className="hover:scale-105 focus:scale-105"
 					>
-						<img src={nkyc} alt="NKYC" width={94} height={90} />
+						<img
+							src={nkyc}
+							alt="NKYC"
+							width={44}
+							height={42}
+							className="lg:w-[94px]"
+						/>
 					</a>
 					<a
 						href="https://xeggex.com/market/BEL_USDT"
@@ -310,7 +363,13 @@ export default function Section6Buy() {
 						rel="noreferrer"
 						className="hover:scale-105 focus:scale-105"
 					>
-						<img src={xeggex} alt="XeggeX" width={215} height={67} />
+						<img
+							src={xeggex}
+							alt="XeggeX"
+							width={102}
+							height={32}
+							className="lg:w-[215px]"
+						/>
 					</a>
 					<a
 						href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
@@ -318,10 +377,15 @@ export default function Section6Buy() {
 						rel="noreferrer"
 						className="hover:scale-105 focus:scale-105"
 					>
-						<img src={coinex} alt="CoinEx" width={189} />
+						<img
+							src={coinex}
+							alt="CoinEx"
+							width={82}
+							className="lg:w-[189px]"
+						/>
 					</a>
 				</div>
-				<div className="relative mt-[66px] flex justify-center font-senior text-[24px] leading-[1.5]">
+				<div className="relative mt-[51px] flex justify-center font-senior text-[16px] leading-[30px] lg:mt-[66px] lg:text-[24px] lg:leading-[1.5]">
 					<p
 						ref={(instance) => {
 							instance && typingObserver.observe(instance)
@@ -345,10 +409,10 @@ export default function Section6Buy() {
 					</p>
 				</div>
 			</div>
-			<div className="mx-auto mt-[166px] grid w-[1080px] grid-cols-[108px_1fr] items-center gap-x-[4px] text-[#505050] *:font-senior *:tracking-[0.015em] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[34px]">
+			<div className="mx-auto mt-[122px] grid w-[340px] grid-cols-[38px_1fr] items-center gap-x-[4px] text-[#505050] *:font-senior *:tracking-[0.015em] lg:mt-[166px] lg:w-[1080px] lg:grid-cols-[108px_1fr] [&>img]:place-self-center [&_h3]:pt-[12px] [&_h3]:text-[18px] lg:[&_h3]:text-[34px]">
 				<img src={bellsGenesis31} alt="" width={90} height={90} />
 				<h3 className="text-[#ED2C31]">Disclaimer</h3>
-				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
+				<p className="col-start-2 mb-[32px] mt-[10px] text-[10px] leading-[14px] lg:mb-[40px] lg:text-[20px] lg:leading-[34px]">
 					<span className="text-[#ED2C31]">$Bells</span> coin has no association
 					with{' '}
 					<span className="text-[#ED2C31]">“Animal Crossing” of Nintendo</span>
@@ -360,7 +424,7 @@ export default function Section6Buy() {
 				</p>
 				<img src={bellsGenesis6} alt="" width={90} height={90} />
 				<h3 className="text-[#08835E]">Donation</h3>
-				<p className="col-start-2 mb-[40px] mt-[10px] text-[20px] leading-[34px]">
+				<p className="col-start-2 mb-[32px] mt-[10px] text-[10px] leading-[14px] lg:mb-[40px] lg:text-[20px] lg:leading-[34px]">
 					Bells coin is not pre-mined and is fully decentralized. The only
 					individuals who have enjoyed the benefits of Bells coin are early
 					miners. We are in need, so please consider donating to help us
@@ -369,19 +433,19 @@ export default function Section6Buy() {
 					<br />
 					<span className="text-[#08835E]">Our $bells address :</span>
 					<br />
-					<span className="text-[#7D5252]">
+					<span className="break-all text-[#7D5252]">
 						BCT6G3f8Z1s2aFxBMwWmTDp1Qk6k9twCRU
 					</span>
 				</p>
 				<img src={bellsGenesis35} alt="" width={90} height={90} />
 				<h3 className="text-[#1D644F]">Contact</h3>
-				<div className="col-start-2 mt-[10px] flex items-center gap-x-[32px] text-[#F0C10F]">
-					<Github width={44} />
-					<Twitter height={40} />
-					<Telegram width={44} />
-					<Discord width={44} />
-					<CoinGecko width={44} />
-					<Linktree height={44} />
+				<div className="col-start-2 mt-[10px] flex items-center gap-x-[20px] text-[#F0C10F] lg:gap-x-[32px]">
+					<Github width={isMobile ? 20 : 44} />
+					<Twitter height={isMobile ? 20 : 40} />
+					<Telegram width={isMobile ? 20 : 44} />
+					<Discord width={isMobile ? 20 : 44} />
+					<CoinGecko width={isMobile ? 20 : 44} />
+					<Linktree height={isMobile ? 20 : 44} />
 				</div>
 			</div>
 		</section>
@@ -392,7 +456,9 @@ function BackgroundMeteor() {
 	const container = useRef<HTMLDivElement>(null)
 	const [m, setM] = useState(0)
 	const [n, setN] = useState(0)
-	const cellSize = 400
+
+	const viewportSize = useViewportSize()
+	const cellSize = viewportSize === 'sm' ? 200 : 400
 
 	useEffect(() => {
 		if (!container?.current) {
@@ -422,7 +488,7 @@ function BackgroundMeteor() {
 	return (
 		<div
 			ref={container}
-			className="absolute left-1/2 top-1/2 h-full w-screen -translate-x-1/2 -translate-y-1/2 rotate-[30deg] overflow-hidden"
+			className="absolute left-1/2 top-1/2 h-full w-screen -translate-x-1/2 -translate-y-1/2 rotate-[30deg] select-none overflow-hidden"
 		>
 			{Array(m * n)
 				.fill(null)
@@ -457,7 +523,13 @@ function BackgroundMeteor() {
 									alt=""
 									className="absolute -top-1/2 left-1/3 -z-[1] -rotate-[30deg]"
 								/>
-								<img src={bellBag} alt="bell bag" width={156} height={136} />
+								<img
+									src={bellBag}
+									alt="bell bag"
+									width={20}
+									height={24}
+									className="lg:w-[156px]"
+								/>
 							</div>
 						</div>
 					)

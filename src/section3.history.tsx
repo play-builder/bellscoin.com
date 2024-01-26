@@ -5,13 +5,14 @@ import dogeCoin from '~/assets/doge-coin.png'
 import dogeTesla from '~/assets/doge-tesla.png'
 import leaf from '~/assets/leaf.svg'
 import speechBubble from '~/assets/speech-bubble.png'
+import { useViewportSize } from '~/util/use-viewport-size.ts'
 
 export default function Section3History() {
 	return (
 		<section>
 			<div className="relative bg-[#FFFBB4] pb-[20px] pt-[37px] lg:pb-[258px] lg:pt-[515px]">
 				<BackgroundLeaves />
-				<div className="mx-auto flex flex-col lg:w-[1080px]">
+				<div className="relative mx-auto flex flex-col lg:w-[1080px]">
 					<p className="mx-auto w-[270px] font-chelsea text-[18px] uppercase leading-[22px] tracking-305 text-[#F4BE04] lg:ml-[455px] lg:w-auto lg:text-[34px] lg:leading-[50px]">
 						Bells ($Bel) was
 						<br />
@@ -110,7 +111,9 @@ function BackgroundLeaves() {
 	const container = useRef<HTMLDivElement>(null)
 	const [m, setM] = useState(0)
 	const [n, setN] = useState(0)
-	const cellSize = 600
+
+	const viewportSize = useViewportSize()
+	const cellSize = viewportSize === 'sm' ? 120 : 600
 
 	useEffect(() => {
 		if (!container?.current) {
@@ -119,12 +122,12 @@ function BackgroundLeaves() {
 
 		setM(Math.ceil(container.current.clientHeight / cellSize))
 		setN(Math.ceil(container.current.clientWidth / cellSize))
-	}, [container])
+	}, [cellSize, container])
 
 	return (
 		<div
 			ref={container}
-			className="absolute left-0 top-0 grid h-full w-full place-items-center overflow-hidden"
+			className="absolute left-0 top-0 grid h-full w-full select-none place-items-center overflow-hidden"
 			style={{
 				gridTemplate: `repeat(${m}, 1fr) / repeat(${n}, 1fr)`,
 				gap: '80px',

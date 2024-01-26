@@ -10,12 +10,12 @@
 # TODO
 
 - `Bells` vs `$Bells` vs `$Bel`, and text colors
-- link elements?
 - change emission schedule from csv to calculating
 - detailed chart tooltip
 - image optimization
-- cleanup unused animations
 - extract common intersection observers
+- meta, seo
+- responsive chart
 
 ---
 
