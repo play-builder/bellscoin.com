@@ -1,3 +1,12 @@
+# Deployment
+
+1. `npm run build`
+2. copy and paste `/dist`
+
+# Development
+
+- `npm run dev`
+
 # TODO
 
 - `Bells` vs `$Bells` vs `$Bel`, and text colors
@@ -7,6 +16,8 @@
 - image optimization
 - cleanup unused animations
 - extract common intersection observers
+
+---
 
 # React + TypeScript + Vite
 
