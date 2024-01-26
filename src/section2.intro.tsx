@@ -16,7 +16,9 @@ const typingObserver = new IntersectionObserver((entries) => {
 					'the creator of Doge Coin.',
 					null,
 					null,
-					'Bells was motivated by animal crossing, the most popular ',
+					'Bells was motivated by animal crossing,',
+					null,
+					'the most popular ',
 					{
 						className: 'text-[#F73602]',
 						tagName: 'span',
@@ -50,7 +52,7 @@ export default function Section2Intro() {
 				style={{ backgroundImage: `url(${mainBackground})` }}
 			/>
 			<div className="invisible absolute left-0 top-0 h-full w-full bg-[rgba(0,194,137,0.4)] lg:visible" />
-			<div className="relative px-[40px] pb-[40px] pt-[100px] lg:px-[calc(42000%/1920)] lg:pb-0 lg:pt-[255px]">
+			<div className="relative px-[calc(4000%/390)] pb-[40px] pt-[100px] lg:px-[calc(42000%/1920)] lg:pb-0 lg:pt-[255px]">
 				<div
 					className="absolute left-0 top-0 h-full w-full bg-cover bg-center bg-no-repeat lg:invisible"
 					style={{ backgroundImage: `url(${mainBackground})` }}
@@ -80,8 +82,12 @@ export default function Section2Intro() {
 							the creator of Doge Coin.
 							<br />
 							<br />
-							Bells was motivated by animal crossing, the most popular{' '}
-							<span className="text-[#F73602]">Nintendo</span> game.
+							Bells was motivated by animal crossing,
+							<br />
+							the most popular <span className="text-[#F73602]">
+								Nintendo
+							</span>{' '}
+							game.
 							<br />
 							<br />
 							Bells coin is the original meme coin born in 2013,
