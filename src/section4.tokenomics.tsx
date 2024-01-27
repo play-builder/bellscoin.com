@@ -6,7 +6,8 @@ import bellCoins from '~/assets/bell-coins.png'
 import ribbon from '~/assets/ribbon.svg'
 import starWand from '~/assets/star-wand.png'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
-import { EmissionChart } from '~/section4.chart.tsx'
+import { EmissionChartLarge } from '~/section4.chart-large.tsx'
+import { EmissionChartSmall } from '~/section4.chart-small.tsx'
 import { useViewportSize } from '~/util/use-viewport-size.ts'
 
 const observer = new IntersectionObserver(
@@ -438,11 +439,12 @@ export default function Section4Tokenomics() {
 					</div>
 				</div>
 			</div>
-			<div className="mt-[98px] hidden lg:mt-[308px] lg:block">
+			<div className="mt-[98px] lg:mt-[308px] lg:block">
 				<h3 className="mx-auto w-min text-center font-chelsea text-[24px] leading-[1.2] text-[#834B16] lg:w-auto lg:text-[64px] lg:leading-[74px]">
 					Bellscoin emissions
 				</h3>
-				<EmissionChart />
+				<EmissionChartSmall />
+				<EmissionChartLarge />
 			</div>
 		</section>
 	)

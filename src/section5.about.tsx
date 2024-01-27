@@ -91,7 +91,7 @@ export default function Section5About() {
 				/>
 			</div>
 			<div className="relative mx-auto mt-[40px] w-[330px] lg:mt-[200px] lg:w-[1080px]">
-				<div className="absolute -left-[36px] -top-[8px] lg:-top-[100px] lg:left-[56px]">
+				<div className="absolute -left-[30px] -top-[16px] lg:-top-[100px] lg:left-[56px]">
 					<img
 						src={bellsGenesis31}
 						alt=""
@@ -255,7 +255,7 @@ function BackgroundClouds() {
 
 		setM(Math.ceil(container.current.clientHeight / cellSize))
 		setN(Math.ceil(container.current.clientWidth / cellSize))
-	}, [container])
+	}, [cellSize, container])
 
 	return (
 		<div
