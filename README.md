@@ -15,7 +15,6 @@
 - image optimization
 - extract common intersection observers
 - meta, seo
-- responsive chart
 
 ---
 
