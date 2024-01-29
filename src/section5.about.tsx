@@ -3,12 +3,17 @@ import { useEffect, useRef, useState } from 'react'
 import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
 import apple from '~/assets/apple.png'
 import cloud from '~/assets/cloud.png'
-import dogeTruck from '~/assets/doge-truck.png'
+import dogeTruck1x805Png from '~/assets/doge-truck-1x-805.png'
+import dogeTruck1x805Webp from '~/assets/doge-truck-1x-805.webp'
+import dogeTruck2x1610Png from '~/assets/doge-truck-2x-1610.png'
+import dogeTruck2x1610Webp from '~/assets/doge-truck-2x-1610.webp'
+import dogeTruck2x506Png from '~/assets/doge-truck-2x-506.png'
+import dogeTruck2x506Webp from '~/assets/doge-truck-2x-506.webp'
 import garland from '~/assets/garland.png'
 import grass from '~/assets/grass.png'
 import orange from '~/assets/orange.png'
 import soil from '~/assets/soil.png'
-import speechBubble from '~/assets/speech-bubble.png'
+import sprite from '~/assets/sprite.svg'
 import sprout from '~/assets/sprout.png'
 import { useViewportSize } from '~/util/use-viewport-size.ts'
 
@@ -181,41 +186,48 @@ export default function Section5About() {
 				<div className="absolute bottom-[60px] w-max animate-[slide-left_7s_linear_infinite,rattling_2s_linear_infinite] lg:bottom-[360px] lg:right-[calc(36800%/1920)]">
 					<div className="absolute -left-[20px] -top-[160px] lg:-top-[344px] lg:left-[260px]">
 						<div className="relative">
-							<img
-								src={speechBubble}
-								alt="speech bubble"
+							<svg
 								width={248}
 								height={99}
-								className="h-[112px] lg:h-[230px] lg:w-[373px]"
-							/>
-							<span className="absolute top-[10px] w-[248px] text-center font-senior text-[12px] uppercase leading-[18px] text-[#525252] lg:top-[36px] lg:w-[373px] lg:text-[24px] lg:leading-[30px]">
+								className="drop-shadow-bubble lg:h-[200px] lg:w-[448px]"
+							>
+								<use href={`${sprite}#speechBubble`} />
+							</svg>
+							<span className="absolute top-[10px] w-[248px] text-center font-senior text-[12px] uppercase leading-[18px] text-[#525252] lg:top-[36px] lg:w-[448px] lg:text-[24px] lg:leading-[30px]">
 								Do you want
 								<br />
-								more
+								more exchanges?
 								<br />
-								exchanges?
+								THEN,
 								<br />
-								THEN{' '}
-								<span className="text-[#ED2C31]">
-									MAKE
-									<br />
-									SOME NOISE
-								</span>
-								!
+								<span className="text-[#ED2C31]">MAKE SOME NOISE</span>!
 							</span>
 						</div>
-						<div className="ml-[88px] mt-[10px] h-[25px] w-[25px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:mt-[9px] lg:h-[64px] lg:w-[64px]" />
+						<div className="ml-[88px] mt-[10px] h-[25px] w-[25px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-[20px] lg:mt-[9px] lg:h-[64px] lg:w-[64px]" />
 						<div className="ml-[80px] mt-[3px] h-[19px] w-[19px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:-ml-[41px] lg:mt-[9px] lg:h-[50px] lg:w-[50px]" />
 						<div className="ml-[72px] mt-[4px] h-[15px] w-[15px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:-ml-[68px] lg:mt-[14px] lg:h-[38px] lg:w-[38px]" />
 						<div className="ml-[80px] mt-[8px] h-[9px] w-[9px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:-ml-[49px] lg:mt-[37px] lg:h-[24px] lg:w-[24px]" />
 					</div>
-					<img
-						src={dogeTruck}
-						alt="doge on truck"
-						width={253}
-						height={145}
-						className="lg:w-[805px]"
-					/>
+					<picture>
+						<source
+							media="(-webkit-min-device-pixel-ratio: 1.5)"
+							srcSet={`${dogeTruck2x1610Webp} 805w, ${dogeTruck2x506Webp} 253w`}
+							sizes="(min-width: 1300px) 805px, 253px"
+						/>
+						<source
+							media="(-webkit-min-device-pixel-ratio: 1.5)"
+							srcSet={`${dogeTruck2x1610Png} 805w, ${dogeTruck2x506Png} 253w`}
+							sizes="(min-width: 1300px) 805px, 253px"
+						/>
+						<source srcSet={`${dogeTruck1x805Webp} 805w`} />
+						<img
+							src={dogeTruck1x805Png}
+							alt="doge on truck"
+							width={253}
+							height={145}
+							className="lg:w-[805px]"
+						/>
+					</picture>
 				</div>
 				<div
 					style={{

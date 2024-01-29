@@ -1,7 +1,10 @@
-import bellBag from '~/assets/bell-bag.png'
 import mainBackground from '~/assets/main-background.svg'
-import speechBubble from '~/assets/speech-bubble.png'
-import welcomeBoard from '~/assets/welcome-board.png'
+import sprite from '~/assets/sprite.svg'
+import welcomeBoard1x859Png from '~/assets/welcome-board-1x-859.png'
+import welcomeBoard1x859Webp from '~/assets/welcome-board-1x-859.webp'
+import welcomeBoard2x1718Png from '~/assets/welcome-board-2x-1718.png'
+import welcomeBoard2x1718Webp from '~/assets/welcome-board-2x-1718.webp'
+import { BellBag } from '~/component/BellBag.tsx'
 import { typewriter } from '~/util/typewriter.ts'
 
 const typingObserver = new IntersectionObserver((entries) => {
@@ -59,13 +62,24 @@ export default function Section2Intro() {
 				/>
 				<div className="absolute left-0 top-0 h-full w-full bg-[rgba(0,194,137,0.4)] lg:invisible" />
 				<div className="relative">
-					<img
-						src={welcomeBoard}
-						alt="Welcome to Bells coin"
-						width={859}
-						height={543}
-						className="absolute -left-[40px] -top-[202px] w-[300px] origin-bottom-left lg:-left-[226px] lg:-top-[568px] lg:w-[859px]"
-					/>
+					<picture>
+						<source
+							media="(-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1300px)"
+							srcSet={`${welcomeBoard2x1718Webp} 859w`}
+						/>
+						<source
+							media="(-webkit-min-device-pixel-ratio: 1.5) and (min-width: 1300px)"
+							srcSet={`${welcomeBoard2x1718Png} 859w`}
+						/>
+						<source srcSet={`${welcomeBoard1x859Webp} 859w`} />
+						<img
+							src={welcomeBoard1x859Png}
+							alt="Welcome to Bells coin"
+							width={859}
+							height={543}
+							className="absolute -left-[40px] -top-[202px] w-[300px] origin-bottom-left lg:-left-[226px] lg:-top-[568px] lg:w-[859px]"
+						/>
+					</picture>
 					<h1 className="-ml-[4px] text-[20px] leading-[1.8] tracking-305 text-white lg:text-[56px]">
 						Bells ($Bel) coin
 					</h1>
@@ -115,24 +129,29 @@ export default function Section2Intro() {
 				</p>
 				<div className="relative -left-[4px] mt-[32px] flex lg:absolute lg:-right-[100px] lg:-top-[260px] lg:left-auto lg:mt-0">
 					<div className="absolute left-[100px] top-[112px] animate-[jump-shaking_1s_infinite] lg:left-[140px] lg:top-[196px]">
-						<img
-							src={bellBag}
-							alt="bell bag"
+						<BellBag
 							width={89}
 							height={113}
 							className="rotate-[11deg] drop-shadow-[14px_14px_15px_#313131] lg:w-[262px]"
 						/>
+						{/*<img*/}
+						{/*	src={bellBag}*/}
+						{/*	alt="bell bag"*/}
+						{/*	width={89}*/}
+						{/*	height={113}*/}
+						{/*	className="rotate-[11deg] drop-shadow-[14px_14px_15px_#313131] lg:w-[262px]"*/}
+						{/*/>*/}
 					</div>
 					<div className="flex-shrink-0">
 						<div className="relative">
-							<img
-								src={speechBubble}
-								alt="speech bubble"
+							<svg
 								width={126}
 								height={72}
-								className="w-[126px] lg:w-[228px]"
-							/>
-							<span className="absolute top-[20px] text-center font-mogra text-[12px] leading-[12px] tracking-305 text-[#F2C834] lg:top-[26px] lg:text-[20px] lg:leading-[1.5]">
+								className="drop-shadow-bubble lg:h-[131px] lg:w-[228px]"
+							>
+								<use href={`${sprite}#speechBubble`} />
+							</svg>
+							<span className="absolute top-[20px] text-center font-mogra text-[12px] leading-[12px] tracking-305 text-[#F2C834] lg:top-[22px] lg:text-[20px] lg:leading-[1.5]">
 								I need more Bells coin ($BEL)!
 							</span>
 						</div>
@@ -142,14 +161,14 @@ export default function Section2Intro() {
 					</div>
 					<div className="-mt-[13px] ml-[34px] flex-shrink-0 lg:ml-[32px] lg:mt-[5px]">
 						<div className="relative">
-							<img
-								src={speechBubble}
-								alt="speech bubble"
+							<svg
 								width={185}
 								height={108}
-								className="lg:w-[305px]"
-							/>
-							<span className="absolute top-[16px] w-full text-center font-mogra text-[12px] leading-[12px] tracking-305 text-[#F2C834] lg:top-[20px] lg:text-[16px] lg:leading-[22px]">
+								className="drop-shadow-bubble lg:h-[182px] lg:w-[305px]"
+							>
+								<use href={`${sprite}#speechBubble`} />
+							</svg>
+							<span className="absolute top-[12px] w-full text-center font-mogra text-[12px] leading-[12px] tracking-305 text-[#F2C834] lg:top-[20px] lg:text-[16px] lg:leading-[22px]">
 								It’s so cool
 								<br />
 								<span className="text-[#ED2C31]">meme coin</span>!

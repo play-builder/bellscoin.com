@@ -178,7 +178,7 @@ export default function Section1Header() {
 					<div className="w-[12px]" />
 					<div className="w-[18px]" />
 				</div>
-				<nav className="invisible mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative *:z-[1] focus-within:*:text-[#FFE46A] hover:*:text-[#FFE46A] lg:visible [&_li]:text-white focus-within:[&_li]:text-[#08835E] hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
+				<nav className="invisible relative z-[2] mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative focus-within:*:text-[#FFE46A] hover:*:text-[#FFE46A] lg:visible [&_li]:text-white focus-within:[&_li]:text-[#08835E] hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
 					<div className="group" tabIndex={0}>
 						<span>BELSCAN</span>
 						<ul className="group-focus-within:visible group-hover:visible">
@@ -356,7 +356,7 @@ export default function Section1Header() {
 				</nav>
 			</div>
 			<div className="h-[43px] bg-[#FFE46A] lg:h-[96px]">
-				<nav className="invisible mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-[#FFE46A] lg:visible">
+				<nav className="invisible relative z-[1] mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-[#FFE46A] lg:visible">
 					<Github width={50} />
 					<Twitter height={44} />
 					<Telegram width={50} />

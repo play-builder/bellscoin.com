@@ -3,16 +3,39 @@ import { useEffect, useRef, useState } from 'react'
 import bellsGenesis31 from '~/assets/Bells Genesis-31.png'
 import bellsGenesis35 from '~/assets/Bells Genesis-35.png'
 import bellsGenesis6 from '~/assets/Bells Genesis-6.png'
-import bellBag from '~/assets/bell-bag.png'
 import coinex from '~/assets/coinex.svg'
-import nkyc from '~/assets/nkyc.png'
-import pepeCex from '~/assets/pepe-cex.jpg'
-import pepeHappy from '~/assets/pepe-happy.jpg'
-import pepeMining from '~/assets/pepe-mining.jpg'
-import pepeMoon from '~/assets/pepe-moon.jpg'
+import nkyc1x94Png from '~/assets/nkyc-1x-94.png'
+import nkyc2x188Png from '~/assets/nkyc-2x-188.png'
+import nkyc2x188Webp from '~/assets/nkyc-2x-188.webp'
+import pepeCex1x520Avif from '~/assets/pepe-cex-1x-520.avif'
+import pepeCex1x520Jpg from '~/assets/pepe-cex-1x-520.jpg'
+import pepeCex2x1040Avif from '~/assets/pepe-cex-2x-1040.avif'
+import pepeCex2x1040Jpg from '~/assets/pepe-cex-2x-1040.jpg'
+import pepeCex2x300Avif from '~/assets/pepe-cex-2x-300.avif'
+import pepeCex2x300Jpg from '~/assets/pepe-cex-2x-300.jpg'
+import pepeHappy1x520Avif from '~/assets/pepe-happy-1x-520.avif'
+import pepeHappy1x520Jpg from '~/assets/pepe-happy-1x-520.jpg'
+import pepeHappy2x1040Avif from '~/assets/pepe-happy-2x-1040.avif'
+import pepeHappy2x1040Jpg from '~/assets/pepe-happy-2x-1040.jpg'
+import pepeHappy2x300Avif from '~/assets/pepe-happy-2x-300.avif'
+import pepeHappy2x300Jpg from '~/assets/pepe-happy-2x-300.jpg'
+import pepeMining1x520Avif from '~/assets/pepe-mining-1x-520.avif'
+import pepeMining1x520Jpg from '~/assets/pepe-mining-1x-520.jpg'
+import pepeMining2x1040Avif from '~/assets/pepe-mining-2x-1040.avif'
+import pepeMining2x1040Jpg from '~/assets/pepe-mining-2x-1040.jpg'
+import pepeMining2x400Avif from '~/assets/pepe-mining-2x-400.avif'
+import pepeMining2x400Jpg from '~/assets/pepe-mining-2x-400.jpg'
+import pepeMoon1x520Avif from '~/assets/pepe-moon-1x-520.avif'
+import pepeMoon1x520Jpg from '~/assets/pepe-moon-1x-520.jpg'
+import pepeMoon2x1040Avif from '~/assets/pepe-moon-2x-1040.avif'
+import pepeMoon2x1040Jpg from '~/assets/pepe-moon-2x-1040.jpg'
+import pepeMoon2x400Avif from '~/assets/pepe-moon-2x-400.avif'
+import pepeMoon2x400Jpg from '~/assets/pepe-moon-2x-400.jpg'
 import trail1 from '~/assets/trail-1.svg'
 import trail2 from '~/assets/trail-2.svg'
-import xeggex from '~/assets/xeggex.png'
+import xeggex1x215Png from '~/assets/xeggex-1x-215.png'
+import xeggex2x430Png from '~/assets/xeggex-2x-430.png'
+import { BellBag } from '~/component/BellBag.tsx'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { typewriter } from '~/util/typewriter.ts'
 import { useViewportSize } from '~/util/use-viewport-size.ts'
@@ -81,15 +104,13 @@ export default function Section6Buy() {
 				<BackgroundMeteor />
 				<div className="relative mx-auto w-[360px] lg:w-[1080px]">
 					<div className="absolute -left-[28px] -top-[124px] hidden lg:block">
-						<img
-							src={bellBag}
+						<BellBag
 							alt=""
 							width={84}
 							height={100}
 							className="-rotate-[15deg] -scale-x-100"
 						/>
-						<img
-							src={bellBag}
+						<BellBag
 							alt=""
 							width={140}
 							height={167}
@@ -97,15 +118,13 @@ export default function Section6Buy() {
 						/>
 					</div>
 					<div className="absolute right-[52px] top-[92px] hidden lg:block">
-						<img
-							src={bellBag}
+						<BellBag
 							alt=""
 							width={68}
 							height={82}
 							className="rotate-[15deg] -scale-x-100"
 						/>
-						<img
-							src={bellBag}
+						<BellBag
 							alt=""
 							width={140}
 							height={169}
@@ -117,16 +136,30 @@ export default function Section6Buy() {
 					</h2>
 					<div className="relative z-0 mt-[24px] font-senior text-[12px] text-[#691823] lg:mt-[100px] lg:text-[24px] lg:leading-[1.33]">
 						<div className="flex items-center gap-x-[12px] lg:gap-x-[44px]">
-							<img
-								ref={(instance) => {
-									instance && pepeObserver.observe(instance)
-								}}
-								src={pepeMining}
-								alt="Pepe is mining"
-								width={200}
-								height={200}
-								className="scale-0 lg:w-[520px]"
-							/>
+							<picture>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${pepeMining2x1040Avif} 520w, ${pepeMining2x400Avif} 200w`}
+									sizes="(min-width: 1300px) 520px, 200px"
+								/>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${pepeMining2x1040Jpg} 520w, ${pepeMining2x400Jpg} 200w`}
+									sizes="(min-width: 1300px) 520px, 200px"
+								/>
+								<source srcSet={pepeMining1x520Avif} type="image/avif" />
+								<img
+									ref={(instance) => {
+										instance && pepeObserver.observe(instance)
+									}}
+									src={pepeMining1x520Jpg}
+									alt="Pepe is mining"
+									width={200}
+									height={200}
+									className="scale-0 lg:w-[520px]"
+									loading="lazy"
+								/>
+							</picture>
 							<p className="overflow-hidden break-words">
 								Download <span className="text-[#ED2C31]">Qt wallet</span>
 								<br />
@@ -200,16 +233,30 @@ export default function Section6Buy() {
 						</div>
 						<div className="flex justify-between">
 							<div className="flex flex-col items-center">
-								<img
-									ref={(instance) => {
-										instance && pepeObserver.observe(instance)
-									}}
-									src={pepeHappy}
-									alt=""
-									width={150}
-									height={150}
-									className="scale-0 lg:w-[520px]"
-								/>
+								<picture>
+									<source
+										media="(-webkit-min-device-pixel-ratio: 1.5)"
+										srcSet={`${pepeHappy2x1040Avif} 520w, ${pepeHappy2x300Avif} 150w`}
+										sizes="(min-width: 1300px) 520px, 150px"
+									/>
+									<source
+										media="(-webkit-min-device-pixel-ratio: 1.5)"
+										srcSet={`${pepeHappy2x1040Jpg} 520w, ${pepeHappy2x300Jpg} 150w`}
+										sizes="(min-width: 1300px) 520px, 150px"
+									/>
+									<source srcSet={pepeHappy1x520Avif} type="image/avif" />
+									<img
+										ref={(instance) => {
+											instance && pepeObserver.observe(instance)
+										}}
+										src={pepeHappy1x520Jpg}
+										alt="Pepe is happy"
+										width={150}
+										height={150}
+										className="scale-0 lg:w-[520px]"
+										loading="lazy"
+									/>
+								</picture>
 								<p className="mt-[6px] text-center lg:mt-[24px]">
 									If you mine,
 									<br />
@@ -217,16 +264,30 @@ export default function Section6Buy() {
 								</p>
 							</div>
 							<div className="flex flex-col items-center">
-								<img
-									ref={(instance) => {
-										instance && pepeObserver.observe(instance)
-									}}
-									src={pepeCex}
-									alt=""
-									width={150}
-									height={150}
-									className="scale-0 lg:w-[520px]"
-								/>
+								<picture>
+									<source
+										media="(-webkit-min-device-pixel-ratio: 1.5)"
+										srcSet={`${pepeCex2x1040Avif} 520w, ${pepeCex2x300Avif} 150w`}
+										sizes="(min-width: 1300px) 520px, 150px"
+									/>
+									<source
+										media="(-webkit-min-device-pixel-ratio: 1.5)"
+										srcSet={`${pepeCex2x1040Jpg} 520w, ${pepeCex2x300Jpg} 150w`}
+										sizes="(min-width: 1300px) 520px, 150px"
+									/>
+									<source srcSet={pepeCex1x520Avif} type="image/avif" />
+									<img
+										ref={(instance) => {
+											instance && pepeObserver.observe(instance)
+										}}
+										src={pepeCex1x520Jpg}
+										alt="Pepe going to Cex"
+										width={150}
+										height={150}
+										className="scale-0 lg:w-[520px]"
+										loading="lazy"
+									/>
+								</picture>
 								<p className="mt-[6px] text-center lg:mt-[24px]">
 									You can also buy
 									<br />
@@ -314,16 +375,30 @@ export default function Section6Buy() {
 							</div>
 						</div>
 						<div className="flex flex-col items-center">
-							<img
-								ref={(instance) => {
-									instance && pepeObserver.observe(instance)
-								}}
-								src={pepeMoon}
-								alt=""
-								width={200}
-								height={200}
-								className="scale-0 lg:w-[520px]"
-							/>
+							<picture>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${pepeMoon2x1040Avif} 520w, ${pepeMoon2x400Avif} 200w`}
+									sizes="(min-width: 1300px) 520px, 200px"
+								/>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${pepeMoon2x1040Jpg} 520w, ${pepeMoon2x400Jpg} 200w`}
+									sizes="(min-width: 1300px) 520px, 200px"
+								/>
+								<source srcSet={pepeMoon1x520Avif} type="image/avif" />
+								<img
+									ref={(instance) => {
+										instance && pepeObserver.observe(instance)
+									}}
+									src={pepeMoon1x520Jpg}
+									alt="Pepe, to the Moon!"
+									width={200}
+									height={200}
+									className="scale-0 lg:w-[520px]"
+									loading="lazy"
+								/>
+							</picture>
 							<p className="mt-[6px] text-center lg:mt-[24px]">
 								HODL and
 								<br />
@@ -349,13 +424,24 @@ export default function Section6Buy() {
 						rel="noreferrer"
 						className="hover:scale-105 focus:scale-105"
 					>
-						<img
-							src={nkyc}
-							alt="NKYC"
-							width={44}
-							height={42}
-							className="lg:w-[94px]"
-						/>
+						<picture>
+							<source
+								media="(-webkit-min-device-pixel-ratio: 1.5)"
+								srcSet={`${nkyc2x188Webp} 94w`}
+							/>
+							<source
+								media="(-webkit-min-device-pixel-ratio: 1.5)"
+								srcSet={`${nkyc2x188Png} 94w`}
+							/>
+							<img
+								src={nkyc1x94Png}
+								alt="NKYC"
+								width={44}
+								height={42}
+								className="lg:w-[94px]"
+								loading="lazy"
+							/>
+						</picture>
 					</a>
 					<a
 						href="https://xeggex.com/market/BEL_USDT"
@@ -363,13 +449,20 @@ export default function Section6Buy() {
 						rel="noreferrer"
 						className="hover:scale-105 focus:scale-105"
 					>
-						<img
-							src={xeggex}
-							alt="XeggeX"
-							width={102}
-							height={32}
-							className="lg:w-[215px]"
-						/>
+						<picture>
+							<source
+								media="(-webkit-min-device-pixel-ratio: 1.5)"
+								srcSet={`${xeggex2x430Png} 215w`}
+							/>
+							<img
+								src={xeggex1x215Png}
+								alt="XeggeX"
+								width={102}
+								height={32}
+								className="lg:w-[215px]"
+								loading="lazy"
+							/>
+						</picture>
 					</a>
 					<a
 						href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
@@ -382,6 +475,7 @@ export default function Section6Buy() {
 							alt="CoinEx"
 							width={82}
 							className="lg:w-[189px]"
+							loading="lazy"
 						/>
 					</a>
 				</div>
@@ -458,6 +552,7 @@ function BackgroundMeteor() {
 	const [n, setN] = useState(0)
 
 	const viewportSize = useViewportSize()
+	const [prevViewportSize, setPrevViewportSize] = useState(viewportSize)
 	const cellSize = viewportSize === 'sm' ? 200 : 400
 
 	useEffect(() => {
@@ -474,16 +569,15 @@ function BackgroundMeteor() {
 
 		setM(Math.ceil(d / cellSize))
 		setN(Math.ceil(d / cellSize))
+	}, [cellSize, m, n])
 
-		const resizeHandler = () => {
+	useEffect(() => {
+		if (prevViewportSize !== viewportSize) {
 			setM(0)
 			setN(0)
+			setPrevViewportSize(viewportSize)
 		}
-		window.addEventListener('resize', resizeHandler)
-		return () => {
-			window.removeEventListener('resize', resizeHandler)
-		}
-	}, [m, n])
+	}, [prevViewportSize, viewportSize])
 
 	return (
 		<div
@@ -523,13 +617,7 @@ function BackgroundMeteor() {
 									alt=""
 									className="absolute -top-1/2 left-1/3 -z-[1] -rotate-[30deg]"
 								/>
-								<img
-									src={bellBag}
-									alt="bell bag"
-									width={20}
-									height={24}
-									className="lg:w-[156px]"
-								/>
+								<BellBag width={20} height={24} className="lg:w-[156px]" />
 							</div>
 						</div>
 					)

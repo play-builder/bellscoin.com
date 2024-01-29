@@ -1,10 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
 
-import bellBag from '~/assets/bell-bag.png'
-import dogeCoin from '~/assets/doge-coin.png'
-import dogeTesla from '~/assets/doge-tesla.png'
+import dogeCoin1x88Png from '~/assets/doge-coin-1x-88.png'
+import dogeCoin1x88Webp from '~/assets/doge-coin-1x-88.webp'
+import dogeCoin2x196Png from '~/assets/doge-coin-2x-196.png'
+import dogeCoin2x196Webp from '~/assets/doge-coin-2x-196.webp'
+import dogeTesla1x400Png from '~/assets/doge-tesla-1x-400.png'
+import dogeTesla1x400Webp from '~/assets/doge-tesla-1x-400.webp'
+import dogeTesla2x360Png from '~/assets/doge-tesla-2x-360.png'
+import dogeTesla2x360Webp from '~/assets/doge-tesla-2x-360.webp'
+import dogeTesla2x800Png from '~/assets/doge-tesla-2x-800.png'
+import dogeTesla2x800Webp from '~/assets/doge-tesla-2x-800.webp'
 import leaf from '~/assets/leaf.svg'
-import speechBubble from '~/assets/speech-bubble.png'
+import sprite from '~/assets/sprite.svg'
+import { BellBag } from '~/component/BellBag.tsx'
 import { useViewportSize } from '~/util/use-viewport-size.ts'
 
 export default function Section3History() {
@@ -26,13 +34,25 @@ export default function Section3History() {
 							<span className="text-[#ED2C31] lg:order-1 lg:pl-[20px]">
 								DOGE coin
 							</span>
-							<img
-								src={dogeCoin}
-								alt="DOGE"
-								width={45}
-								height={45}
-								className="inline lg:w-[88px]"
-							/>
+							<picture>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${dogeCoin2x196Webp} 88w, ${dogeCoin1x88Webp} 45w`}
+									sizes="(min-width: 1300px) 88px, 45px"
+								/>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${dogeCoin2x196Png} 88w, ${dogeCoin1x88Png} 45w`}
+									sizes="(min-width: 1300px) 88px, 45px"
+								/>
+								<img
+									src={dogeCoin1x88Png}
+									alt="DOGE"
+									width={45}
+									height={45}
+									className="lg:w-[88px]"
+								/>
+							</picture>
 						</span>
 						<br />
 						was released in the world
@@ -40,14 +60,14 @@ export default function Section3History() {
 					<div className="relative mx-auto mt-[100px] translate-x-[52px] lg:ml-[192px] lg:mt-[40px]">
 						<div className="absolute -translate-x-[120px] -translate-y-[80px] lg:-translate-x-[calc(100%-80px)] lg:-translate-y-[calc(100%-67px)]">
 							<div className="relative lg:ml-[22px]">
-								<img
-									src={speechBubble}
-									alt="speech bubble"
+								<svg
 									width={127}
 									height={83}
-									className="lg:w-[253px]"
-								/>
-								<span className="absolute top-[10px] w-full text-center font-mogra text-[12px] uppercase leading-[12px] tracking-305 lg:top-[16px] lg:text-[24px] lg:leading-[26px]">
+									className="drop-shadow-bubble lg:h-[169px] lg:w-[253px]"
+								>
+									<use href={`${sprite}#speechBubble`} />
+								</svg>
+								<span className="absolute top-[14px] w-full text-center font-mogra text-[12px] uppercase leading-[12px] tracking-305 lg:top-[22px] lg:text-[24px] lg:leading-[26px]">
 									I came into
 									<br />
 									the world
@@ -63,9 +83,7 @@ export default function Section3History() {
 							<div className="ml-[14px] mt-[4px] h-[13px] w-[13px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-0 lg:mt-[15px] lg:h-[32px] lg:w-[32px]" />
 							<div className="ml-[21px] mt-[4px] h-[9px] w-[9px] rounded-full bg-[#F8D703] drop-shadow-bubble lg:ml-[42px] lg:mt-[12px] lg:h-[22px] lg:w-[22px]" />
 							<div className="animate-[jump-shaking_1s_infinite]">
-								<img
-									src={bellBag}
-									alt="bell bag"
+								<BellBag
 									width={76}
 									height={95}
 									className="ml-[25px] -scale-x-100 lg:-mt-[10px] lg:ml-[42px] lg:w-[191px]"
@@ -73,23 +91,36 @@ export default function Section3History() {
 							</div>
 						</div>
 						<div className="mt-[40px] flex flex-shrink-0 animate-[jump-shaking-2_.5s_linear_infinite] lg:ml-[22px] lg:mt-[5px]">
-							<img
-								src={dogeTesla}
-								alt="doge on tesla"
-								width={180}
-								height={180}
-								className="lg:w-[400px]"
-							/>
+							<picture>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${dogeTesla2x800Webp} 400w, ${dogeTesla2x360Webp} 180w`}
+									sizes="(min-width: 1300px) 400px, 180px"
+								/>
+								<source
+									media="(-webkit-min-device-pixel-ratio: 1.5)"
+									srcSet={`${dogeTesla2x800Png} 400w, ${dogeTesla2x360Png} 180w`}
+									sizes="(min-width: 1300px) 400px, 180px"
+								/>
+								<source srcSet={`${dogeTesla1x400Webp} 400w`} />
+								<img
+									src={dogeTesla1x400Png}
+									alt="doge on tesla"
+									width={180}
+									height={180}
+									className="lg:w-[400px]"
+								/>
+							</picture>
 							<div className="absolute -translate-y-[100px] translate-x-[100px] lg:translate-x-[420px] lg:translate-y-[20px]">
 								<div className="relative lg:ml-[112px]">
-									<img
-										src={speechBubble}
-										alt="speech bubble"
+									<svg
 										width={69}
 										height={44}
-										className="lg:w-[195px]"
-									/>
-									<span className="absolute top-[8px] w-full text-center font-mogra text-[12px] leading-[12px] tracking-305 lg:top-[15px] lg:pl-[10px] lg:text-[36px] lg:leading-[1.2]">
+										className="drop-shadow-bubble lg:h-[124px] lg:w-[195px]"
+									>
+										<use href={`${sprite}#speechBubble`} />
+									</svg>
+									<span className="absolute top-[9px] w-full text-center font-mogra text-[12px] leading-[12px] tracking-305 lg:top-[15px] lg:pl-[10px] lg:text-[36px] lg:leading-[1.2]">
 										SO,,
 										<br />
 										WHAT?

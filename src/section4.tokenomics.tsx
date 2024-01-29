@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 
-import bellBag from '~/assets/bell-bag.png'
 import bellCoin from '~/assets/bell-coin.png'
 import bellCoins from '~/assets/bell-coins.png'
 import ribbon from '~/assets/ribbon.svg'
 import starWand from '~/assets/star-wand.png'
+import { BellBag } from '~/component/BellBag.tsx'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
 import { EmissionChartLarge } from '~/section4.chart-large.tsx'
 import { EmissionChartSmall } from '~/section4.chart-small.tsx'
@@ -217,21 +217,19 @@ export default function Section4Tokenomics() {
 				</div>
 				<div className="mt-[100px] grid grid-cols-[260px] grid-rows-[repeat(3,250px_100px)_250px] justify-center *:w-full lg:mt-[176px] lg:grid-cols-[380px_170px_380px] lg:grid-rows-[360px_170px_360px] lg:[&>*:nth-child(3n+1)]:justify-self-end">
 					<div className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]">
-						<img
+						<BellBag
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
-							src={bellBag}
 							alt=""
 							width={80}
 							height={95}
 							className="absolute -top-[72px] left-[69px] scale-0 lg:-left-[70px] lg:-top-[94px] lg:w-[153px]"
 						/>
-						<img
+						<BellBag
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
-							src={bellBag}
 							alt=""
 							width={80}
 							height={95}
@@ -280,11 +278,10 @@ export default function Section4Tokenomics() {
 						/>
 					</div>
 					<div className="relative rounded-[69px] bg-white pt-[28px] font-mogra uppercase leading-[1.2] drop-shadow-bubble lg:pt-[20px]">
-						<img
+						<BellBag
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
-							src={bellBag}
 							alt=""
 							width={80}
 							height={95}
@@ -344,11 +341,10 @@ export default function Section4Tokenomics() {
 							gridArea: isMobile ? 'initial' : '3 / 3 / 4 / 4',
 						}}
 					>
-						<img
+						<BellBag
 							ref={(instance) => {
 								instance && observer.observe(instance)
 							}}
-							src={bellBag}
 							alt=""
 							width={45}
 							height={53}
