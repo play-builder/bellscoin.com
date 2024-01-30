@@ -44,7 +44,7 @@ const linkGroups: LinkGroup[] = [
 		text: 'WALLETS',
 		links: [
 			{
-				text: 'NODE(QT)WALLETS',
+				text: 'NODE(QT) WALLETS',
 				href: 'https://github.com/Nintondo/bellscoin/releases/tag/2.0.0',
 			},
 			{ text: 'ORDINALS WALLET', href: 'https://bells.ordinalswallet.com/' },
@@ -178,181 +178,43 @@ export default function Section1Header() {
 					<div className="w-[12px]" />
 					<div className="w-[18px]" />
 				</div>
-				<nav className="invisible relative z-[2] mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white *:relative focus-within:*:text-[#FFE46A] hover:*:text-[#FFE46A] lg:visible [&_li]:text-white focus-within:[&_li]:text-[#08835E] hover:[&_li]:text-[#08835E] [&_ul]:invisible [&_ul]:absolute [&_ul]:flex [&_ul]:flex-col [&_ul]:gap-y-[16px] [&_ul]:rounded-[13px] [&_ul]:bg-[#FFE46A] [&_ul]:px-[12px] [&_ul]:pb-[18px] [&_ul]:pt-[24px] [&_ul]:text-left [&_ul]:text-[24px] [&_ul]:leading-[20px] [&_ul]:drop-shadow-bubble">
-					<div className="group" tabIndex={0}>
-						<span>BELSCAN</span>
-						<ul className="group-focus-within:visible group-hover:visible">
-							<li>
-								<a href="https://belscan.io/" target="_blank" rel="noreferrer">
-									BELSCAN
-								</a>
-							</li>
-							<li>
+				<nav className="invisible relative z-[2] mx-auto flex h-full max-w-[2560px] items-center justify-end space-x-[40px] pr-[90px] text-center font-mogra text-[24px] leading-[1.2] tracking-305 text-white lg:visible">
+					{linkGroups.map((linkGroup) => (
+						<div
+							key={linkGroup.text}
+							className="group relative focus-within:text-[#FFE46A] hover:text-[#FFE46A]"
+							tabIndex={linkGroup.href ? undefined : 0}
+						>
+							{linkGroup.href ? (
 								<a
-									href="https://bells.quark.blue/tx/"
-									target="_blank"
-									rel="noreferrer"
+									href={linkGroup.href}
+									{...(!linkGroup.href.startsWith('#') && {
+										target: '_blank',
+										rel: 'noreferrer',
+									})}
+									className="inline-block w-min"
 								>
-									BELLS
-									<br />
-									QUARK
+									{linkGroup.text}
 								</a>
-							</li>
-						</ul>
-					</div>
-					<a
-						href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
-						target="_blank"
-						rel="noreferrer"
-					>
-						NODE
-						<br />
-						DOWNLOAD
-					</a>
-					<div className="group" tabIndex={0}>
-						<span>WALLETS</span>
-						<ul className="group-focus-within:visible group-hover:visible">
-							<li>
-								<a
-									href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
-									target="_blank"
-									rel="noreferrer"
-								>
-									NODE(QT)
-									<br />
-									WALLET
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://bells.ordinalswallet.com/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									ORDINALS
-									<br />
-									WALLET
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.fxwallet.com/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									FXWALLET
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://github.com/Nintondo/bellscoin/releases/tag/2.0.0"
-									target="_blank"
-									rel="noreferrer"
-								>
-									NINTONDO
-									<br />
-									WALLET
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div className="group">
-						<a href="#exchanges">EXCHANGES</a>
-						<ul className="group-focus-within:visible group-hover:visible">
-							<li>
-								<a
-									href="https://www.coinex.com/ko/exchange/bellscoin-usdt"
-									target="_blank"
-									rel="noreferrer"
-								>
-									COINEX
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://xeggex.com/market/BEL_USDT"
-									target="_blank"
-									rel="noreferrer"
-								>
-									XEGGEX
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://nonkyc.io/market/BEL_USDT"
-									target="_blank"
-									rel="noreferrer"
-								>
-									NONKYC
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div className="group" tabIndex={0}>
-						<span>ORDINALS</span>
-						<ul className="group-focus-within:visible group-hover:visible">
-							<li>
-								<a
-									href="https://bellscribe.com/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BELLSCRIBE
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://belsbells.com/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BELS BELLS
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://bellscoinpunks.xyz/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BELLS COIN
-									<br />
-									PUNKS
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://bellinals.nintondo.io/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BELLINALS
-									<br />
-									INDEXER
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://bell.drc20.fun/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BELINALS
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://bells-indexer.netlify.app/"
-									target="_blank"
-									rel="noreferrer"
-								>
-									BRC-20
-									<br />
-									INDEXER
-								</a>
-							</li>
-						</ul>
-					</div>
+							) : (
+								<span className="inline-block w-min">{linkGroup.text}</span>
+							)}
+							{linkGroup.links ? (
+								<ul className="invisible absolute flex max-w-[240px] flex-col gap-y-[16px] rounded-[13px] bg-[#FFE46A] px-[12px] pb-[18px] pt-[24px] text-left text-[24px] leading-[20px] drop-shadow-bubble group-focus-within:visible group-hover:visible">
+									{linkGroup.links.map((link) => (
+										<li
+											key={link.text}
+											className="text-white focus-within:text-[#08835E] hover:text-[#08835E]"
+										>
+											<a href={link.href} target="_blank" rel="noreferrer">
+												{link.text}
+											</a>
+										</li>
+									))}
+								</ul>
+							) : null}
+						</div>
+					))}
 				</nav>
 			</div>
 			<div className="h-[43px] bg-[#FFE46A] lg:h-[96px]">
