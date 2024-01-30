@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, useEffect, useState } from 'react'
 
 import bellCoin from '~/assets/bell-coin.png'
 import bellCoins from '~/assets/bell-coins.png'
@@ -6,9 +6,10 @@ import ribbon from '~/assets/ribbon.svg'
 import starWand from '~/assets/star-wand.png'
 import { BellBag } from '~/component/BellBag.tsx'
 import { SequenceArrows } from '~/component/SequenceArrows.tsx'
-import { EmissionChartLarge } from '~/section4.chart-large.tsx'
-import { EmissionChartSmall } from '~/section4.chart-small.tsx'
 import { useViewportSize } from '~/util/use-viewport-size.ts'
+
+const EmissionChartSmall = lazy(() => import('./section4.chart-small'))
+const EmissionChartLarge = lazy(() => import('./section4.chart-large'))
 
 const observer = new IntersectionObserver(
 	(entries) => {

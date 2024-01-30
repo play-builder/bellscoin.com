@@ -15,13 +15,8 @@ import bellBagChart2 from '~/assets/bell-bag-chart-2.png'
 import bellBagChart3 from '~/assets/bell-bag-chart-3.png'
 import bellCoins from '~/assets/bell-coins.png'
 
-import emissionScheduleRaw from './emission-schedule.csv?raw'
-
-const emissionSchedule = emissionScheduleRaw
-	.split('\n')
-	.map((row) => row.split(','))
-const emissionDates = emissionSchedule.map((row) => row[0])
-const emissionValues = emissionSchedule.map((row) => row[1])
+import { emissionSchedules } from './section4.emission-schedule.ts'
+const { dates: emissionDates, values: emissionValues } = emissionSchedules
 
 const chartPointEpoch2 = new Image(37, 25)
 chartPointEpoch2.src = bellBagChart3
@@ -66,7 +61,7 @@ Chart.register(
  * When data is updated or the chart size changes,
  * you may need to adjust absolutely positioned elements.
  */
-export function EmissionChartSmall() {
+export default function EmissionChartSmall() {
 	return (
 		<div className="relative mx-auto mt-[18px] w-[340px] lg:hidden">
 			<div className="absolute right-[6px] top-[9px] h-[112px] w-[188px] bg-gradient-to-r from-[rgba(43,105,97,0.2)] to-[rgba(24,255,175,0)]">

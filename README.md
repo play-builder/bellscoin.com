@@ -10,7 +10,6 @@
 # TODO
 
 - `Bells` vs `$Bells` vs `$Bel`, and text colors
-- change emission schedule from csv to calculating
 - detailed chart tooltip
 - image optimization
 - extract common intersection observers
