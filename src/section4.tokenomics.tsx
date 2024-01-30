@@ -1,4 +1,4 @@
-import { lazy, useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 
 import bellCoin from '~/assets/bell-coin.png'
 import bellCoins from '~/assets/bell-coins.png'
@@ -440,8 +440,16 @@ export default function Section4Tokenomics() {
 				<h3 className="mx-auto w-min text-center font-chelsea text-[24px] leading-[1.2] text-[#834B16] lg:w-auto lg:text-[64px] lg:leading-[74px]">
 					Bellscoin emissions
 				</h3>
-				<EmissionChartSmall />
-				<EmissionChartLarge />
+				<Suspense
+					fallback={
+						<div className="mx-auto mt-[18px] w-[340px] lg:mt-[140px] lg:w-[1280px]">
+							<div className="mx-auto w-full pb-[50%]" />
+						</div>
+					}
+				>
+					<EmissionChartSmall />
+					<EmissionChartLarge />
+				</Suspense>
 			</div>
 		</section>
 	)
