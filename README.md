@@ -13,7 +13,6 @@
 - detailed chart tooltip
 - image optimization
 - extract common intersection observers
-- meta, seo
 
 ---
 
