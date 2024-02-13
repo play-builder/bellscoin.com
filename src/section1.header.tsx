@@ -73,11 +73,9 @@ const linkGroups: LinkGroup[] = [
 		text: 'ORDINALS',
 		links: [
 			{ text: 'BELLSCRIBE', href: 'https://bellscribe.com/' },
-			{ text: 'BELS BELLS', href: 'https://belsbells.com/' },
-			{ text: 'BELLS COIN PUNKS', href: 'https://bellscoinpunks.xyz/' },
 			{ text: 'BELLINALS INDEXER', href: 'https://bellinals.nintondo.io/' },
 			{ text: 'BELINALS', href: 'https://bell.drc20.fun/' },
-			{ text: 'BRC-20 INDEXER', href: 'https://bells-indexer.netlify.app/' },
+			{ text: 'BEL-20 INDEXER', href: 'https://bells-indexer.netlify.app/' },
 		],
 	},
 ]
