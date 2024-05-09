@@ -41,9 +41,16 @@ export default function Section4Tokenomics() {
 	>('loading')
 
 	useEffect(() => {
-		fetch('https://v2.belscan.io/ext/getmoneysupply')
-			.then(async (response) => {
-				setCurrentSupply(Math.floor(Number(await response.text())))
+		fetch('http://13.124.182.6/v1/gettotalamount')
+			.then((response) => {
+				if (!response.ok) {
+					throw new Error('Network response was not ok')
+				}
+				return response.json() // JSON 형태로 응답을 파싱
+			})
+			.then((data) => {
+				console.log(data) // 서버로부터 받은 JSON 객체를 콘솔에 출력
+				setCurrentSupply(Math.floor(Number(data.total_amount))) // total_amount 값을 사용
 			})
 			.catch(() => {
 				setCurrentSupply('not available')
