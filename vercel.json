@@ -1,0 +1,31 @@
+{
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      },
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "github": {
+    "deployments": {
+      "productionBranch": "main",
+      "previews": {
+        "halving": {
+          "outputDirectory": ".",
+          "buildCommand": ""
+        }
+      }
+    }
+  }
+}
