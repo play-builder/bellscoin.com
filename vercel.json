@@ -2,13 +2,7 @@
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      },
-      "env": {
-        "NODE_ENV": "production"
-      }
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
@@ -29,3 +23,4 @@
     }
   }
 }
+
